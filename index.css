@@ -1,0 +1,351 @@
+/* All page CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #666;
+    min-height: 480px;
+    min-width: 320px;
+    font-size: 1rem!important;
+}
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+h1{
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/* -------------------------------------------------- */
+    
+
+#container{
+    width: 100%;
+    height: 200vh;
+    margin-top: 100px;
+    /* background-color: tomato; */
+}
+
+/* part-1 */
+
+    #part-1{
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    
+    #sliderDiv{
+        display: flex;
+        /* justify-content: center; */
+        width: 100%;
+        height: 175px;
+        padding: 0 40px;
+    }
+    
+    .slider{
+        /* width: 800px; */
+        width: 100%;
+        /* height: 500px; */
+        height: 175px;
+        border-radius: 2px;
+        /* border: solid red; */
+        overflow: hidden;
+    }
+    
+    .slides{
+        width: 500%;
+        /* height: 500px; */
+        height: 175px;
+        display: flex;
+        
+        /* border: solid green; */
+    }
+    
+    .slides input{
+        display: none;
+    }
+    
+    .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    
+    .slide img{
+        /* width: 800px; */
+        max-width: 100%;
+        height: 500px;
+        height: 175px;
+    }
+    
+    /* Css for manual slide navigation */
+    
+    .navigation-manual{
+       position: absolute;
+       width: 800px;
+       margin-top: -20px;
+       display: flex;
+       justify-content: center;
+    }
+    
+    .manual-btn{
+        border: 1px solid #151616;    
+        padding: 2px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    
+    .manual-btn:hover{
+        background: #0f0f0f;
+    }
+    
+    #radio1:checked ~ .first{
+        margin-left: 0;
+    }
+    #radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    
+    /* CSS for automatic navigation */
+    
+    .navigation-auto{
+        position: absolute;
+        display: flex;
+        /* width: 800px; */
+        width: 100%;
+        justify-content: center;
+        margin-top: 152px;
+        /* border: 2px solid red; */
+        margin-left: -275px;
+    }
+    
+    .navigation-auto div{
+        /* border: 1px solid #40d3dc; */
+        padding: 5px;
+        border-radius: 10px;
+        /* transition: 1s; */
+        /* display: flex; */
+        /* gap: 40px; */
+    }
+    
+    .navigation-auto div:not(:last-child){
+        margin-right: 37px;
+    }
+    
+    #radio1:checked ~ .navigation-auto .auto-btn1{
+        background: #000000;
+    }
+    
+    #radio2:checked ~ .navigation-auto .auto-btn2{
+        background: #000000;
+    }
+    
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+        background: #0a0a0a;
+    }
+    
+    #radio4:checked ~ .navigation-auto .auto-btn4{
+        background: #050505;
+    }
+    
+    /* resposive part-1 "slider, img, dots" */
+    @media screen and (max-width: 1050px){
+        .manual-btn, .navigation-auto div{
+            display: none;
+        }
+        .slider + img{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 871px){
+        .manual-btn, .navigation-auto div{
+            display: none;
+        }
+        .slides img, .slides, .slider, .sliderDiv{
+             height: 160px;
+             margin: 0;
+             padding: 0;
+             margin: auto;
+        }
+        .slider + img{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 560px){
+        .manual-btn, .navigation-auto div{
+            display: none;
+        }
+        .slides img, .slides, .slider, .sliderDiv{
+            height: 120px;
+            margin: 0;
+            padding: 0;
+            margin: auto;
+       }
+        .slider + img{
+            display: none;
+        }
+        
+    }
+    @media screen and (max-width: 410px){
+        .manual-btn, .navigation-auto div{
+            display: none;
+        }
+        .slides img, .slides, .slider, .sliderDiv{
+            height: 100px;
+            margin-bottom: -100px;
+            padding: -100px 0;
+            margin: auto;
+       }
+        .slider + img{
+            display: none;
+        }
+        
+    }
+
+/* ------------------------------------------------ */
+
+/* part-2 */
+
+#part-2{
+    display: flex;
+    height: 13vh;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    border: 2px solid #e0e0e0;
+    background-color: #fff;
+    border-width: 2px 0;
+}
+#part-2 h1{
+    margin: 12px 0;
+    font-size: 24px;
+}
+
+/* responsive part-2 "h1" */
+@media screen and (max-width: 724px){
+    #part-2 h1 {
+        margin: 6px 0;
+        font-size: 18px;
+    }
+    #part-2{
+        height: 9vh;
+    }
+}
+@media screen and (max-width: 530px){
+    #part-2 h1 {
+        margin: 2px 0;
+        font-size: 15px;
+    }
+    #part-2{
+        height: 9vh;
+    }
+}
+@media screen and (max-width: 410px){
+    #part-2 h1 {
+        margin: 2px 0;
+        font-size: 11px;
+    }
+    #part-2{
+        height: 9vh;
+    }
+}
+/* -------------------------------------- */
+
+/* part-3 */
+.fullimg{
+    width: 100%;
+    padding: 20px 2%;
+}
+
+/* -------------------------------------- */
+
+/* part-4 */
+#part-4 h2{
+    font-size: 18px;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #212121;
+    margin: 20px 0 10px 30px;
+}
+
+#part-4 p{
+    font-size: 14px;
+    /* height: 45px; */
+    color: #212121;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#healthConcerns{
+    display: flex;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    box-shadow: 0 0 7px 0 rgb(0 0 0 / 14%);
+}
+
+.pseudobuttons{
+    /* border: 2px solid red; */
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    opacity: 0.8;
+}
+.pseudobuttons:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.pseudoprev{
+    opacity: 0;
+}
+
+.healthConcernsDivs{
+    padding: 20px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.healthConcernsDivs:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.healthConcernsDivs p{
+    padding-top: 10px;
+}
+
+/* ---------------------------------------- */
+
+/* part-5 */
+/* some of the css comes from part-4 */
+#part-5 h2{
+    font-size: 18px;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #212121;
+    margin: 40px 0 10px 30px;
+}
+
+#part-5 p{
+    font-size: 14px;
+    /* height: 45px; */
+    color: #212121;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* ---------------------------------------- */
