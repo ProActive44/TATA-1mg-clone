@@ -6,42 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Pharmacy India | Buy Medicines from India's Trusted Medicine Store:</title>
     <link rel="stylesheet" href="login.css">
-    
 </head>
 <body>
     <!-- <div id="navbar"></div> -->
     <div id="login-container">
-        <div class="best-sellers" id="slide-img"> <h1>.....</h1></div>
-
+        <div id="left-part">.......
+        </div>
         <div id="right-part">
-            <h1>Login</h1>
-            <p>Get access to your orders, lab tests & doctor consultations</p>
-            <form>
+            <h1>Sign Up</h1>
+            <p>Please enter your email and password</p>
+            <div>
                 <div id="d1">
-                    <input type="email" id="email" placeholder="Enter Email ID">
+                    <input id="email" type="email" placeholder="Enter Email Address">
                     <hr style="border: 1px solid red; background-color: red;">
                 </div>
                 <div id="d2">
-                    <input id="pass" type="password" placeholder="Enter Password">
+                    <input id="username" type="text" placeholder="Enter Name">
                     <hr style="border: 1px solid red; background-color: red;">
                 </div>
-                <br>
-                
-                <input type="button" id="loginBtn" value="LOGIN">
-            </form>
+                <div id="d3">
+                    <input id="password" type="password" placeholder="Enter New Password">
+                    <hr style="border: 1px solid red; background-color: red;">
+                </div>
+                <button id="signUpBtn" onclick="signupBtn()">CONTINUE</button>
+            </div>
 
             <div id="last">
-                <p style="text-align: center;">New on 1mg?<span id="span"><a href="signup.html">Sign Up</a></span></p>
-                <p style="text-align: center;">
+                <p>Have an account? <span id="span"><a href="login.html">Login</a></span></p>
+                <p>
                     By logging in, you agree to our 
                     <br>
                     <a href="">
-                        <p style="text-align: center;">Terms and Conditions & Privacy Policy</p>
+                        <p>Terms and Conditions & Privacy Policy</p>
                     </a>
                 </p>
-                <a style="text-align: center;" href=""><p>Need Help? Get In Touch</p></a>
             </div>
         </div>
     </div>
 </body>
 </html>
+<script src="signup.js"></script>
