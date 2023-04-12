@@ -15,7 +15,7 @@
         <div id="right-part">
             <h1>Sign Up</h1>
             <p>Please enter your email and password</p>
-            <div>
+            <form id="signup-form">
                 <div id="d1">
                     <input id="email" type="email" placeholder="Enter Email Address">
                     <hr style="border: 1px solid red; background-color: red;">
@@ -28,8 +28,9 @@
                     <input id="password" type="password" placeholder="Enter New Password">
                     <hr style="border: 1px solid red; background-color: red;">
                 </div>
-                <button id="signUpBtn" onclick="signupBtn()">CONTINUE</button>
-            </div>
+                <br>
+                <input type="submit" id="signupBtn" value="CONTINUE">
+            </form>
 
             <div id="last">
                 <p>Have an account? <span id="span"><a href="login.html">Login</a></span></p>

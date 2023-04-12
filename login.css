@@ -10,3 +10,9 @@
     width: 100%;
     height: 90vh;
 } 
+#last p{
+    text-align: center;
+}
+.slide-img {
+    position: relative;
+}

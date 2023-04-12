@@ -11,37 +11,38 @@
 <body>
     <!-- <div id="navbar"></div> -->
     <div id="login-container">
-        <div class="best-sellers" id="slide-img"> <h1>.....</h1></div>
+        <div id="slide-img"></div>
 
         <div id="right-part">
             <h1>Login</h1>
             <p>Get access to your orders, lab tests & doctor consultations</p>
-            <form>
+            <form id="login-form">
                 <div id="d1">
                     <input type="email" id="email" placeholder="Enter Email ID">
                     <hr style="border: 1px solid red; background-color: red;">
                 </div>
                 <div id="d2">
-                    <input id="pass" type="password" placeholder="Enter Password">
+                    <input id="password" type="password" placeholder="Enter Password">
                     <hr style="border: 1px solid red; background-color: red;">
                 </div>
                 <br>
                 
-                <input type="button" id="loginBtn" value="LOGIN">
+                <input type="submit" id="loginBtn" value="LOGIN">
             </form>
 
             <div id="last">
-                <p style="text-align: center;">New on 1mg?<span id="span"><a href="signup.html">Sign Up</a></span></p>
-                <p style="text-align: center;">
+                <p>New on 1mg?<span id="span"><a href="signup.html">Sign Up</a></span></p>
+                <p>
                     By logging in, you agree to our 
                     <br>
                     <a href="">
-                        <p style="text-align: center;">Terms and Conditions & Privacy Policy</p>
+                        <p>Terms and Conditions & Privacy Policy</p>
                     </a>
                 </p>
-                <a style="text-align: center;" href=""><p>Need Help? Get In Touch</p></a>
+                <a href=""><p>Need Help? Get In Touch</p></a>
             </div>
         </div>
     </div>
 </body>
 </html>
+<script src="login.js"></script>
