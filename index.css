@@ -10,9 +10,13 @@ body {
     min-height: 480px;
     min-width: 320px;
     font-size: 1rem!important;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 h1, h2, h3, h4 {
     font-weight: 400;
+}
+h2, h3, h4 {
+    color: #1a1a1a;
 }
 h1{
     display: block;
@@ -1075,3 +1079,281 @@ h1{
 }
 
 /* ----------------------------------------------- */
+
+
+
+/* part-16 Bodymassagers */
+
+#part-16 h2{
+    font-size: 18px;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #212121;
+    margin: 40px 0 10px 30px;
+}
+
+.part-16-main-Container{
+    display: flex;
+    gap: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0px 200px 0 40px;
+    overflow: hidden;
+}
+
+.part-16-Container-card{
+  padding: 20px 10px;
+    min-width: 170px ;
+    overflow: hidden;
+    text-align: left;
+    min-height: 300px;
+    cursor: pointer;
+}
+
+.part-16-Container-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+  }
+
+.part-16-Container-card img{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.part-16-Container-card h3{
+    font-size: 14px;
+    height: 35px;
+    overflow: hidden;
+    color: #212121;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin: 10px 0;
+}
+
+.part-16-Container-card p{
+    font-size: 12px;
+    color: #757575;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.part-16-Container-card .oldPriceDiv{
+    display: flex;
+    gap: 5%;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+.part-16-Container-card .oldPriceDiv .discount{
+    color: #1aab2a;
+}
+
+.part-16-Container-card .price{
+    /* font-size: 14px; */
+    font-weight: 700;
+    display: inline-block;
+    font-size: 16px;
+    color: #212121;
+}
+
+#part-16 .pseudobuttons{
+     margin-top: 170px;
+     margin-left: -5px;
+     overflow: hidden;
+}
+
+#part-16 > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#part-16 button{
+    font-weight: 700;
+    /* align-self:flex-end; */
+    margin: 40px 15px 5px 0;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 5px 10px!important;
+    height: 1.7rem;
+    font-size: .75rem;
+    display: inline-block;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+#part-16 button:hover{
+    background-color: #fa5647;
+}
+
+/* ----------------------------------------------- */
+
+
+
+
+/* beforeFooter */
+
+#beforeFooter{
+    display: block;
+    text-align: justify;
+    padding: 50px 50px;
+    /* border: 2px solid chartreuse; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 50px 0;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+}
+
+
+#beforeFooter h2, h3{
+    font-weight: 600;
+    color: #1a1a1a;
+    font-weight: 600;
+
+}
+
+#beforeFooter h3{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;   
+}
+
+#beforeFooter p {
+    font-size: 16px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+
+/* ----- Footer ------------- */
+
+/* India's Largest Health-Care Platform */
+#topbar{
+    text-align: center;
+
+}
+.topbar-last{
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 300px; */
+    padding: 30px;
+}
+.topbar-last div{
+    padding: 5px;
+}
+
+.topbar-last .numbers{
+    font-size: larger;
+    font-weight: 1000;
+    color: black;
+}
+.topbar-last .numberDesc{
+    font-size:medium;
+    font-weight:500;
+    color: black;
+}
+
+/* Rooler */
+#centerd-line-in-footer{
+    margin: 10px 100px;
+    /* padding: 1px;        */
+    border: 2px solid black;
+    border-radius: 100px;
+    opacity: 0.5;
+}
+
+/* Download our App */
+#download-our-app{
+  padding: 16px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#download-our-app .get-link{
+    font-size: 20px;
+}
+.enter-mobile-number-div button{
+    border-radius: 4px;
+    background-color: #ff6f61;
+    width: 112px;
+    height: 40px;
+    margin-left: 8px;
+    border: none;
+    vertical-align: middle;
+    color: #fff;
+}
+.enter-mobile-number-div input{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #000;
+    height: 40px;
+    width: 300px;
+    background-color: #f1f4f6;
+    padding-left: 15px;
+    vertical-align: middle;
+}
+
+/* know-us-divs */
+
+#know-us-divs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 50px;
+}
+
+#know-us-divs h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#know-us-divs li{
+    /* text-decoration: none; */
+    list-style-type: none;
+    font-size: 13px;
+}
+
+#know-us-divs .KNOW_US{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#know-us-divs .KNOW_US ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+#know-us-divs img{
+    width: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#know-us-divs .social-media img{
+    padding: 3px;
+}
+#know-us-divs .KNOW_US .logos{
+    width: 90%;
+    border-radius: 5px;
+}

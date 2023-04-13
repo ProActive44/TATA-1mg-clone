@@ -446,9 +446,63 @@ document
 // --------------------------------------------------------------------  
 
 
+// ---- For slide buttons in part-16 ---------------------------------------------------
+
+var part16_lastWidth;
+let part16_LeftShift = 300;
+document
+  .querySelector("#part-16 .pseudonext")
+  .addEventListener("click", function () {
+    console.log("call" + part16_LeftShift + " " + part16_lastWidth);
+    document.querySelector("#part-16 .pseudoprev").style.opacity = "1";
+    // document.querySelector(".pseudonext").style.opacity = "0"
+    document.querySelector("#part-16 .pseudonext").style.transition = "1s";
+    document.querySelector(
+      "#part-16 .part-16-main-Container .first"
+    ).style.margin = `0 0 0 -${part16_LeftShift}px`;
+    document.querySelector("#part-16 .part-16-main-Container .first").style.transition =
+      "0.5s";
+    part16_LeftShift += 300;
+
+    if (windowWidth < 500) {
+      part16_lastWidth = 1600;
+    } else if (windowWidth < 700) {
+      part16_lastWidth = 1200;
+    } else if (windowWidth < 1000) {
+      part16_lastWidth = 900;
+    } else if (windowWidth < 1400) {
+      part16_lastWidth = 600;
+    } else {
+      part16_lastWidth = 300;
+    }
+
+    if (part16_LeftShift > part16_lastWidth) {
+      document.querySelector("#part-16 .pseudonext").style.opacity = "0";
+      part16_LeftShift = 300;
+    }
+  });
+
+document
+  .querySelector("#part-16 .pseudoprev")
+  .addEventListener("click", function () {
+    document.querySelector("#part-16 .pseudoprev").style.opacity = "0";
+    document.querySelector("#part-16 .pseudoprev").style.transition = "1s";
+    document.querySelector("#part-16 .pseudonext").style.opacity = "1";
+
+    document.querySelector("#part-16 .part-16-main-Container .first").style.margin =
+      "0 0 0 0";
+    document.querySelector("#part-16 .part-16-main-Container .first").style.transition =
+      "1s";
+    part16_LeftShift = 300;
+  });
 
 
-// All Array fetch and display here ------------------------------
+// --------------------------------------------------------------------
+
+
+
+
+// All Arrays fetch and display here ------------------------------
 
 let displayPopularCombo = (data, container) => {
     
@@ -559,6 +613,16 @@ let Bodymassagers = document.querySelector(".part-15-main-Container")
 getdata("https://onemg-server-1muy.onrender.com/Bodymassagers", Bodymassagers) 
 
 // ---------------------------------------------------------------------------------
+
+
+// -------part-16 FootHealth Array Fetching and appending here--------
+
+let FootHealth = document.querySelector(".part-16-main-Container")
+getdata("https://onemg-server-1muy.onrender.com/FootHealth", FootHealth) 
+
+// ---------------------------------------------------------------------------------
+
+
 
 // getdata("https://onemg-server-1muy.onrender.com/cart", Bodymassagers)
 
