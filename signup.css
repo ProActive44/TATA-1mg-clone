@@ -20,14 +20,56 @@ body{
 .slider {
     width: 100%;
     overflow: hidden;
-  }
+}
 
 .slider img {
-    padding: 80px 80px;
+    padding-left: 150px;
+    padding-top: 150px;
     height: auto;
     display: block;
 }
 
+input{
+    display: block;
+    width: 90%;
+    height: 30px;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+}
+hr{
+    width: 90%;
+    margin-top: -1px;   
+    margin-left: -3px; 
+}
+#login-container > div:nth-child(2){
+    padding: 30px;
+}
+
+#d2{
+   margin-top: 40px;
+}
+#d1{
+    margin-top: 30px;
+}
+#d3{
+    margin-top: 40px;
+}
+
 #last p{
     text-align: center;
+}
+
+#signupBtn{
+    display: block;
+    width: 90%;
+    height: 40px;
+    margin-top: 20px;
+    background-color:  rgb(255, 111, 97);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid rgb(255, 111, 97);
+    border-radius: 5px;
+    cursor: pointer;
 }
