@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f6f6f6;
+        }
+        #filter{
+        width: 15%;
+        background-color: white;
+        margin-left: 15px;
+        /* position: fixed; */
+        }
+         #filter ul li{
+            padding: 5px;
+            list-style-type: none;
+            /* margin-left: 20px; */
+         }
+        #filter a{
+            color: black;
+            text-decoration: none;
+        }
+        /* #brand span{
+            display: block;
+            align-items: flex-end;
+        } */
+        .main_body{
+            display: flex;
+            gap: 10px;
+        }
+        #product{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:10px;
+            width: 100%;
+        }
+        #product img{
+            width: 100%;
+        }
+
+        #box1{
+            width:70%;
+            
+        }
+        #box1 img{
+            width: 100%;
+            height: 40%;
+        }
+
+        #rate{
+            width: 17%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_body">
+        <div id="filter" >
+                
+            <ul>
+                <h3 style="margin-left: 9px;"> CATEGORIES</h3> 
+                <li><a href="product.html"><span style="color: red;margin-left: -20px;">DIABETES</span> </a></li>
+                <li><a href="product.html">Diabetes Monitoring</a></li>
+                <li><a href="product.html">Sugar Free</a></li>
+                <li><a href="product.html">Diabetic Medicines</a></li>
+                <li><a href="product.html"> Sugar Substitutes</a></li>
+                <li><a href="product.html">Diabetic Diet</a></li>
+                <li><a href="product.html">Diabetic Footwear</a></li>
+                <li><a href="product.html"><span style="color: red;margin-left: -20px;">Show all</span> </a></li>
+            </ul>
+
+            <ul>
+                <h3 style="margin-left: -40px; padding: 5px;border-bottom: 1px solid;border-color: rgba(128, 128, 128, 0.934);"><span style="margin-left: 30px;">FILTERS</span></h3>
+                <h3 style="margin-left: 20px;padding: 5px">Brand</h3> 
+                <input style="padding: 10px;border-radius: 5px;border-color:rgba(128, 128, 128, 0.934) ;" type="text" placeholder="Search Brands">
+            </ul>
+            <ul id="brand">
+                <li>
+                    <input type="checkbox" name="1">
+                    <label for="1">Bjain</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="2">
+                    <label for="2">Yoho Lifestyle</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="3">
+                    <label for="3">SBL</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="4">
+                    <label for="4"> Equal</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="5">
+                    <label for="5">Doctor Extra Soft</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="6">
+                    <label for="6">Dr. Reckeweg</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="7">
+                    <label for="7">Nutriwish</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="8">
+                    <label for="8">Jain</label>
+                </li>
+            </ul>
+
+            <ul>
+                <h3 style="margin-left: -40px;padding: 5px;border-bottom: 1px solid;border-color: rgba(128, 128, 128, 0.934);"><span style="margin-left: 12px;">PRODUCT TAGS</span></h3>
+                <input style="padding: 10px;border-radius: 5px;border-color:rgba(128, 128, 128, 0.934) ;" type="text" placeholder="Search Product tags">
+            </ul>
+
+            <ul id="brand">
+                <li>
+                    <input type="checkbox" name="1">
+                    <label for="1">Homeopathic</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="2">
+                    <label for="2">Urination</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="3">
+                    <label for="3">Nausea Vomiting</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="4">
+                    <label for="4">Thirst</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="5">
+                    <label for="5">Vomiting Treats</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="6">
+                    <label for="6">Indigestion</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="7">
+                    <label for="7">Nitricum</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="8">
+                    <label for="8">Jamun</label>
+                </li>
+            </ul>
+
+            <ul>
+                <h3 style="margin-left: -40px;padding: 5px;border-bottom: 1px solid;border-color: rgba(128, 128, 128, 0.934);"> <span style="margin-left: 12px;">DISCOUNT</span> </h3>
+                <li>
+                    <input type="checkbox" name="1">
+                    <label for="1">Less than 10%</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="2">
+                    <label for="2">10% and above</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="3">
+                    <label for="3">20% and above</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="4">
+                    <label for="4">30% and above</label>
+                </li>
+            </ul>
+
+            <ul>
+                <h3 style="margin-left: -40px;padding: 5px;border-bottom: 1px solid;border-color: rgba(128, 128, 128, 0.934);"><span style="margin-left: 12px;">PRODUCT FORM</span> </h3>
+                <input style="padding: 10px;border-radius: 5px;border-color:rgba(128, 128, 128, 0.934) ;" type="text" placeholder="Search Product form">
+            </ul>
+
+            <ul id="brand">
+                <li>
+                    <input type="checkbox" name="1">
+                    <label for="1">Dilution</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="2">
+                    <label for="2">Unit</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="3">
+                    <label for="3">Powder</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="4">
+                    <label for="4">Capsule</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="5">
+                    <label for="5">Tablet</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="6">
+                    <label for="6">Pack</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="7">
+                    <label for="7">Liquid</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="8">
+                    <label for="8">Seeds</label>
+                </li>
+            </ul>
+
+            <ul>
+                <h3 style="margin-left: -40px;padding: 5px;border-bottom: 1px solid;border-color: rgba(128, 128, 128, 0.934);"><span style="margin-left: 12px;">USES</span></h3>
+                <input style="padding: 10px;border-radius: 5px;border-color:rgba(128, 128, 128, 0.934) ;" type="text" placeholder="Search uses">
+            </ul>
+
+            <ul id="brand">
+                <li>
+                    <input type="checkbox" name="1">
+                    <label for="1">Diabetes Care</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="2">
+                    <label for="2">Cardiac Care</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="3">
+                    <label for="3">Skin Care</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="4">
+                    <label for="4">Liver Care</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="5">
+                    <label for="5">Mother Care</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="6">
+                    <label for="6">Elderly Care</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="7">
+                    <label for="7">Surgical Aids</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="8">
+                    <label for="8">Stamina Booster</label>
+                </li>
+            </ul>
+
+            <ul>
+                
+                <h3 style="margin-left: -40px;padding: 5px;border-bottom: 1px solid;border-color: rgba(128, 128, 128, 0.934);"><span style="margin-left: 12px;">AGES</span></h3>
+            </ul>
+            <ul>
+                <li>
+                    <input type="checkbox" name="1">
+                    <label for="1">All</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="2">
+                    <label for="2">Elderly</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="3">
+                    <label for="3">Child</label>
+                </li>
+            </ul>
+
+            <ul>
+                
+                <h3 style="margin-left: -40px;padding: 5px;border-bottom: 1px solid;border-color: rgba(128, 128, 128, 0.934);"><Span style="margin-left: 12px;">GENDER</Span> </h3>
+            </ul>
+            <ul>
+                <li>
+                    <input type="checkbox" name="1">
+                    <label for="1">Unisex</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="2">
+                    <label for="2">Male</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="3">
+                    <label for="3">Male</label>
+                </li>
+            </ul>
+
+
+        </div>
+        <div id="product">
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    let arr =[
+        {
+           id:"1",
+           title:"Tata 1mg Tejasya Karela Jamun Juice",
+           image:"https://onemg.gumlet.io/images/f_auto,c_fit,w_150,q_auto,h_150/fc097149f12445aa93e1d16307a843e4/tata-1mg-tejasya-karela-jamun-juice.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/6a7a04976b284d3abc3552afdeb2147b.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/2031b0f8a8c543b2a988b0784e672246.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/2d7731868e51433a8fe8d58184a80cfb.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/7fc98c4ed8bf470dbf2e8287ef4c3571.jpg",
+           rating:"4.3",
+           description:"Combo pack of 4 packs",
+           oldMRP:"₹345",
+           discount:"20%",
+           price:"₹200",
+        },
+        {
+           id:"2",
+           title:"Tata 1mg Tejasya Karela Capsule 500mg",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/6e63814fd69c4d7ba140a3ddc2c6d225.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/545c3b3f8b2f45bbae77b0dce40b9e93.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/bb81eedbfe354696b63707a2a7c447f8.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/4cd62a1be8bb4987857a9662ba6f7ae4.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/17b7a305054742929cf5790cf9a09e08.jpg",
+           rating:"4.4",
+           description:"Combo pack of 2 packs",
+           oldMRP:"₹445",
+           discount:"61%",
+           price:"₹172",
+        }, {
+           id:"3",
+           title:"Kapiva Diafree Juice",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/31ebbe890d52427f9c279f684a371aa3.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/51c4401d762d4775ab18df5b71c43753.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/4f5831b064a64f59a18c7b62d09efe57.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/d40e212a4c7241d882394ab45a618e86.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/e23d901fc1eb490d9ea03c680deb94f2.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/3653ca51b8cb472ab0717b96a403165c.jpg",
+           img6:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/38b48b0db157422693c26c6249959d07.jpg",
+           rating:"4.4",
+           description:"Combo pack of 3 packs",
+           oldMRP:"₹549",
+           discount:"5%",
+           price:"₹522",
+        }, {
+           id:"4",
+           title:"Dr Morepen BG 03 Gluco One Glucose Monitoring System Glucometer with Gluco One BG 03 Blood Glucose 25 Test Strip",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qd8eaznzsf3det7qrytk.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/eu2yd01d20wwxnafxrqg.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qgdk0corsp4bhhttk1nb.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ckrlvoutpni2g2zyvhdb.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pjhngfgawn0lvrhymzx1.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/klcobxhqhb6gsulq0evp.jpg",
+           rating:"4.1",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹1164",
+           discount:"60%",
+           price:"₹508",
+        }, {
+           id:"5",
+           title:"Foxtale Combo Pack of Hydrating Cleanser 100ml & Moisturizer 50ml, Brightening Vitamin C Serum 30ml and Dewy Sunscreen 50ml",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/f1bd0e0a2a8446f69ad7b39a3b9f25da.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/e027642ced704c98b45e1309e6691a19.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/c3fc6a32206945d3b2be47d12219d150.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/a23a11df154b4c7fb31229bc01ac575e.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/95f2f44d925e4b248f0fcdbad783608e.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/148bea1cf99740e89597230de8abe1e3.jpg",
+           rating:"4.2",
+           description:"Combo pack of 6 packs",
+           oldMRP:"₹2064",
+           discount:"20%",
+           price:"₹1651",
+        }, {
+           id:"6",
+           title:"Combo Pack of Tata 1mg Multivitamin Supreme Capsule (60) & Dr. Morepen Omega 3 Deep Sea Fish Oil Triple Strength Softgel (30)",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/537fd698-25dd-43d5-b5f7-02a997bcd33a.jpeg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/guublxtoxxhoyzk0hwbw.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/uupuqvf4xa4nnn7hdsoy.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/nvqrhpprcisacoyixdtl.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/iyz1npobxloyzk8qlrcl.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/0b27a1b49e81400380c1c67e845de4b7.jpg",
+           rating:"4.5",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹1644",
+           discount:"45%",
+           price:"₹900",
+        }, {
+           id:"7",
+           title:"Immunity Care Combo of 1mg Panch Tulsi 30ml Drops and Patanjali Ayurveda Giloy Ghanvati 60 Tablet",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qir6i2zlhzeddxa4mqt0.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qbhf86na2arntxwvy6ib.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ahi5uggj1nayrqm8y4ql.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/vfcykddi0k0aqzk1tbwo.png",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/rqlu7g5khkkdbkes5rzt.png",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/toutn0rtz3ntuhfx5fma.png",
+           rating:"4.2",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹335",
+           discount:"24%",
+           price:"₹238",
+        }, {
+           id:"8",
+           title:"Acne Care Combo of Cetaphil Oily Skin Cleanser 125ml and Klm Klin Face Wash 100ml",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cr9a2p0evnuzwvw5ksp1.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/zuiusjaonsgb29ltwjfs.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/vwv64adr9gzn7gjykbm5.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/bkk9shqg6aewqvlrvxxr.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/uscezax0ond2hlwslwaz.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/pgz3h2ko1tcq2wfziojs.jpg",
+           rating:"4.5",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹820",
+           discount:"15%",
+           price:"₹697",
+        }, {
+           id:"9",
+           title:"Accu-Chek Softclix 100 Lancet (Pack of 4)",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/gdku8sm6o9bzsqvsjihx.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/gdku8sm6o9bzsqvsjihx.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/u7mgqthbquxj3omiv9os.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/kdosnc02uo1y6wtor8uz.png",
+           rating:"4.2",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹500",
+           discount:"1%",
+           price:"₹492",
+        }, {
+           id:"10",
+           title:"Accu-Chek Active Combo of Glucometer with 10 Test Strip Free and 50 Test Strips",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/if0qou7t1ptcaaowcigp.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ccdjesikl9hrugtsxdkk.png",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/xs2i4jn0vomxjm3lfu4j.png",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qsjdgamccyeq9p3bmgua.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cdyqohp3krosdznjcln3.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ryemcb5jrof97txiv6i5.jpg",
+           rating:"4.5",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹2048",
+           discount:"12%",
+           price:"₹1792",
+        }, {
+           id:"11",
+           title:"OneTouch Select Plus Simple Glucometer Value Pack (with 10 Test Strip Free) + 1 Pack of 50 Test Strip + 2 Pack of 25 Lancet",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/lvtn5rrf1guolsh7lrfx.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qq59343n4xootdr1sg1c.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/kvswqprqd4ybw8mftbxt.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ioeks3mottdfxaopnwgx.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/nleslt2libp6j57py7ak.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/yxvzkcqa8iwppfzfozcw.jpg",
+           rating:"4.3",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹2612",
+           discount:"13%",
+           price:"₹2267",
+        }, {
+           id:"12",
+           title:"Pain Relief Combo of Dr Ortho Oil 120ml and Organic India Turmeric Formula 60 Veg Capsule",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/oexechydeypou9aw45xc.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/uzqz7c6xwixno7dpewif.png",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/uxcgndhksd61snpotkwp.png",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/q2hdbazql2wlrbyo9mi3.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/pdwybbo1gz2v8spvixmp.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/mfz0tram9pw8vkuiqhum.jpg",
+           rating:"4.4",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹620",
+           discount:"7%",
+           price:"₹577",
+        }, {
+           id:"13",
+           title:"Accu-Chek Guide 100 Test Strip (Pack of 2)",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/hxvg2in5yaqvruzqkltn.png",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/mb1gozqq8mawfqutcics.png",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ps1rouk7phzqt06bvgbd.png",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/b6b2wai3kxzv5r9eohzb.png",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/b6b2wai3kxzv5r9eohzb.png",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/q6tjx5nayzxxvdif7dvg.png",
+           rating:"4.6",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹2750",
+           discount:"3%",
+           price:"₹2668",
+        }, {
+           id:"14",
+           title:"OneTouch Select Plus Simple Glucometer Value Pack (with 10 Test Strip Free) + 1 Pack of 50 Test Strip + 2 Pack of 25 Lancet",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/lvtn5rrf1guolsh7lrfx.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qq59343n4xootdr1sg1c.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/kvswqprqd4ybw8mftbxt.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ioeks3mottdfxaopnwgx.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/nleslt2libp6j57py7ak.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/yxvzkcqa8iwppfzfozcw.jpg",
+           rating:"4.1",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹2612",
+           discount:"13%",
+           price:"₹2267",
+        }, {
+           id:"15",
+           title:"Pain Relief Combo of Dr Ortho Oil 120ml and Organic India Turmeric Formula 60 Veg Capsule",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/oexechydeypou9aw45xc.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/uzqz7c6xwixno7dpewif.png",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/uxcgndhksd61snpotkwp.png",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/q2hdbazql2wlrbyo9mi3.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/pdwybbo1gz2v8spvixmp.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/mfz0tram9pw8vkuiqhum.jpg",
+           rating:"4.6",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹620",
+           discount:"7%",
+           price:"₹577",
+        }, {
+           id:"16",
+           title:"Accu-Chek Guide 100 Test Strip (Pack of 2)",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/hxvg2in5yaqvruzqkltn.png",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/mb1gozqq8mawfqutcics.png",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ps1rouk7phzqt06bvgbd.png",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/b6b2wai3kxzv5r9eohzb.png",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/q6tjx5nayzxxvdif7dvg.png",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/q6tjx5nayzxxvdif7dvg.png",
+           rating:"4.4",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹2750",
+           discount:"7%",
+           price:"₹2668",
+        }, {
+           id:"17",
+           title:"Anti-oxidants Combo of Organic India Lemon Ginger Tulsi Green Tea 25 Tea Bag and Dabur Honey 1kg",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qdkxnbhl24dgn02m7fc4.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/eswth9sd5uxvvqtohmvs.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/vujxb9hh9fenehqkhgpk.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/wqudca18edq4fxfhhsbz.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/zrhp7j0tbkf6kxrvihrg.png",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/zrhp7j0tbkf6kxrvihrg.png",
+           rating:"4.5",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹689",
+           discount:"14%",
+           price:"₹588",
+        }, {
+           id:"18",
+           title:"Oral Care Combo of Listerine Mouth Wash Cool Mint 500ml and Sensodyne Repair & Protect Toothpaste 100gm",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/g6phmkjrdbw3x4nngxlr.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/th22uxbv7fxu2p0uae4x.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/eeblxjhgtj8zqglgieo3.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/eeblxjhgtj8zqglgieo3.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/skwbsxdtlsgrir9wbmf5.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/skwbsxdtlsgrir9wbmf5.jpg",
+           rating:"4.5",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹550",
+           discount:"6%",
+           price:"₹518",
+        }, {
+           id:"19",
+           title:"Bayer Combo Pack of Supradyn Daily Multivitamin 15 Tablet & Saridon 10 Tablet",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ylfuylfxrh0cvzrxopf3.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/g87wkrtrkjjwuza3vw6h.png",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ylfuylfxrh0cvzrxopf3.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/g87wkrtrkjjwuza3vw6h.png",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/faihx6yshrizwe71b8z2.png",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/faihx6yshrizwe71b8z2.png",
+           rating:"4.2",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹101.4",
+           discount:"13%",
+           price:"₹88",
+        }, {
+           id:"20",
+           title:"Combo Pack of Zincovit Tablet & Limcee Chewable Tablet Orange",
+           image:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qehyx880yecto35fwmen.jpg",
+           img1:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/eutaf0lqnkgwh3amvivh.jpg",
+           img2:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/qehyx880yecto35fwmen.jpg",
+           img3:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/eutaf0lqnkgwh3amvivh.jpg",
+           img4:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/iwsutl4rlwy3ychjr4cn.jpg",
+           img5:"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/iwsutl4rlwy3ychjr4cn.jpg",
+           rating:"4.3",
+           description:"Combo pack of 5 packs",
+           oldMRP:"₹129.86",
+           discount:"10%",
+           price:"₹117",
+        },
+    ]
+
+    displaydata(arr);
+    // console.log(arr);
+    function displaydata(){
+        console.log(arr);
+        document.querySelector("#product").textContent="";
+        arr.map(function(el){
+            let box = document.createElement("div");
+            box.setAttribute("id","box1");
+
+            let image =document.createElement("img");
+            image.src=el.image;
+
+            let name =document.createElement("h3");
+            name.textContent=el.title;
+
+            let des =document.createElement("p");
+            des.textContent=el.description;
+
+            let rating=document.createElement("h3");
+            rating.textContent=el.rating;
+            rating.style.background="green";
+            rating.style.color="white";
+            rating.setAttribute("id","rate");
+            
+            let div1=document.createElement("div");
+            let mrp =document.createElement("p");
+            mrp.textContent="MRP"+el.price
+
+            let disc = document.createElement("p");
+            disc.textContent=el.discount+"OFF"
+
+            div1.append(mrp,disc);
+
+            let div2 = document.createElement("div")
+            let price = document.createElement("h2");
+            price.textContent=el.price;
+
+            let btn =document.createElement("button");
+            btn.textContent="ADD";
+            btn.style.color="red";
+            div2.append(price,btn);
+            box.append(image,name,des,rating,div1,div2);
+
+            document.getElementById("product").append(box);
+
+
+
+        })
+    }
+</script>
