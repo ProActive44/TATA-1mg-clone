@@ -1,26 +1,19 @@
-// function slideshow() {
-//     let slide_img = document.getElementById('slide-img');
-//     let img = document.createElement('img');
+let sliderIndex = 0;
 
-//     let corousel_arr = ['https://www.1mg.com/images/login-signup/Your-Go-To-Health-App.png',
-//         'https://www.1mg.com/images/login-signup/Know-Your-Medicines.png', 
-//         'https://www.1mg.com/images/login-signup/Home-Delivery-of-Medicines.png', 
-//         'https://www.1mg.com/images/login-signup/Lab-Tests-at-Home.png',
-//         'https://www.1mg.com/images/login-signup/Health-Related-Queries.png'
-//     ];
+function showSlides() {
+  const slides = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  sliderIndex++;
+  if (sliderIndex > slides.length) {
+    sliderIndex = 1;
+  }
+  slides[sliderIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change slide every 3 seconds
+}
 
-//     img.src = corousel_arr[0];
-//     slide_img.appendChild(img);
-//     let i = 1;
-//     setInterval(function () {
-//         img.src = corousel_arr[i % corousel_arr];
-//         // img.style.width = '100%';
-//         i++;
-//         slide_img.append(img);
-//     }, 3000);
-
-// }
-// slideshow();
+showSlides();
 
 let storedUserData = JSON.parse(localStorage.getItem('userData'));
 
