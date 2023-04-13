@@ -15,7 +15,7 @@ function showSlides() {
 
 showSlides();
 
-let storedUserData = JSON.parse(localStorage.getItem('userData'));
+let storedUserData = JSON.parse(localStorage.getItem('userData')) || [];
 
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -26,8 +26,15 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     if (storedUserData && email === storedUserData.email && password === storedUserData.password) {
       alert("Login successful");
       window.location.href = 'index.html';
-    } else {
-      alert('Invalid credentials');
+    } 
+    else if(email === storedUserData.email && password !== storedUserData.password){
+      alert('Invalid credentials, Please enter correct details');
+      location.href = "login.html";
+    }else {
+      alert('Please Create an account');
+      location.href = "signup.html";
     }
+
+    localStorage.setItem(storedUserData.username);
 });
   

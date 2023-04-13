@@ -1,0 +1,9 @@
+#navbar-top{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid gray;
+}
+#navbar-top-options1{
+    display: flex;
+    justify-content: space-evenly;
+}
