@@ -1,4 +1,5 @@
-
+import navbar from "../navbar.js";
+document.getElementById("navbar").innerHTML = navbar();
 
 // ----- For Slideshow in part-1 ---------------------------------------
 var counter = 1;
@@ -504,7 +505,7 @@ document
 
 // All Arrays fetch and display here ------------------------------
 
-let displayPopularCombo = (data, container) => {
+let displaydata = (data, container) => {
     
   container.textContent = "";
 
@@ -552,7 +553,7 @@ let getdata = async (url, container) => {
     try {
         let res = await fetch(url)
         let data = await res.json()
-        displayPopularCombo(data, container)
+        displaydata(data, container)
         console.log(data)
     } catch (error) {
         console.log(error)
@@ -572,7 +573,7 @@ let getdata = async (url, container) => {
 let PopularCombo = document.querySelector(".part-8-main-Container");
 getdata("https://onemg-server-1muy.onrender.com/Popular_Combo_Deals", PopularCombo)
 
-// ---------------------------------------------------------------------------------
+
 
 
 // -------part-9 Calcium_supplements Array Fetching and appending here--------
@@ -580,7 +581,7 @@ getdata("https://onemg-server-1muy.onrender.com/Popular_Combo_Deals", PopularCom
 let Calcium_supplement = document.querySelector(".part-9-main-Container")
 getdata("https://onemg-server-1muy.onrender.com/Calcium_supplement", Calcium_supplement) 
 
-// ---------------------------------------------------------------------------------
+
 
 
 // -------part-12 In the Spotlight Array Fetching and appending here--------
@@ -588,7 +589,7 @@ getdata("https://onemg-server-1muy.onrender.com/Calcium_supplement", Calcium_sup
 let spotlight = document.querySelector(".part-12-main-Container")
 getdata("https://onemg-server-1muy.onrender.com/Spotlight", spotlight) 
 
-// ---------------------------------------------------------------------------------
+
 
 
 // -------part-13 Treanding now Array Fetching and appending here--------
@@ -596,7 +597,7 @@ getdata("https://onemg-server-1muy.onrender.com/Spotlight", spotlight)
 let Treanding = document.querySelector(".part-13-main-Container")
 getdata("https://onemg-server-1muy.onrender.com/Treading", Treanding) 
 
-// ---------------------------------------------------------------------------------
+
 
 
 // -------part-14 Breakfast Array Fetching and appending here--------
@@ -604,7 +605,7 @@ getdata("https://onemg-server-1muy.onrender.com/Treading", Treanding)
 let Breakfast = document.querySelector(".part-14-main-Container")
 getdata("https://onemg-server-1muy.onrender.com/Breakfast", Breakfast) 
 
-// ---------------------------------------------------------------------------------
+
 
 
 // -------part-15 Bodymassagers Array Fetching and appending here--------
@@ -612,7 +613,7 @@ getdata("https://onemg-server-1muy.onrender.com/Breakfast", Breakfast)
 let Bodymassagers = document.querySelector(".part-15-main-Container")
 getdata("https://onemg-server-1muy.onrender.com/Bodymassagers", Bodymassagers) 
 
-// ---------------------------------------------------------------------------------
+
 
 
 // -------part-16 FootHealth Array Fetching and appending here--------
@@ -644,3 +645,10 @@ getdata("https://onemg-server-1muy.onrender.com/FootHealth", FootHealth)
 //       console.log(error)
 //   }
 // }
+
+
+// footer part
+
+import footer from "../footer.js"
+
+document.getElementById("footer").innerHTML = footer();
