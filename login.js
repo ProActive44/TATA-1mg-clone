@@ -19,13 +19,16 @@ let storedUserData = JSON.parse(localStorage.getItem('userData')) || [];
 
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
+    var f = 0
   
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
   
     if (storedUserData && email === storedUserData.email && password === storedUserData.password) {
       alert("Login successful");
-      window.location.href = 'index.html';
+      window.location.href = './components/navbar.html';
+
+      localStorage.setItem('userName', storedUserData.name);
     } 
     else if(email === storedUserData.email && password !== storedUserData.password){
       alert('Invalid credentials, Please enter correct details');
@@ -34,7 +37,5 @@ document.getElementById('login-form').addEventListener('submit', function(event)
       alert('Please Create an account');
       location.href = "signup.html";
     }
-
-    localStorage.setItem(storedUserData.username);
 });
   
