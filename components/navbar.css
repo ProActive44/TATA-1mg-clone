@@ -35,8 +35,16 @@
     cursor: pointer;
     margin-left: 10px;
 }
+.text_inside_first_header_row a{
+    color: #212121;
+    text-decoration: none;
+
+}
 
 .text_inside_first_header_row:hover{
+    color: #ff6f61;
+}
+.text_inside_first_header_row a:hover{
     color: #ff6f61;
 }
 
