@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random OTP Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+#otpContainer {
+    margin-top: 20px;
+}
+
+#otpText {
+    font-weight: bold;
+}
+
+#otpValue {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+#errorText {
+    color: red;
+    margin-top: -10px;
+}
+.logo {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <img src="https://assets.1mg.com/pwa-app/production/mweb/2.0.0/static/images/site-icons/1mg-logo-large.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <h2>Enter Your Mobile No.</h2>
+        <input type="tel" id="mobileInput" placeholder="Enter Mobile Number" required>
+        <button onclick="generateOTP()">Get OTP</button>
+        <div id="otpContainer">
+            <p id="otpText">Your OTP:</p>
+            <p id="otpValue"></p>
+        </div>
+        <input type="text" id="otpInput" placeholder="Enter OTP" required>
+        <p id="errorText"></p>
+        <button onclick="verifyOTP()">Submit</button>
+    </div>
+
+   <script>
+    var otp = '';
+
+function generateOTP() {
+    var mobileInput = document.getElementById('mobileInput').value;
+
+    // Check if mobile number is filled
+    if (mobileInput === '') {
+        document.getElementById('errorText').innerText = 'Please enter mobile number.';
+        return;
+    }
+
+    // Generate a random OTP
+    otp = Math.floor(100000 + Math.random() * 900000);
+    document.getElementById('otpValue').innerText = otp;
+}
+
+function verifyOTP() {
+    var otpInput = document.getElementById('otpInput').value;
+
+    // Check if OTP is filled
+    if (otpInput === '') {
+        document.getElementById('errorText').innerText = 'Please enter OTP.';
+        return;
+    }
+
+    // Check if entered OTP matches generated OTP
+    if (otpInput === otp.toString()) {
+        // Redirect to next page
+        window.location.href = 'suc.html';
+    } else {
+        document.getElementById('errorText').innerText = 'Invalid OTP. Please try again.';
+    }
+}
+
+   </script>
+</body>
+</html>
