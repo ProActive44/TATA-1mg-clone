@@ -1,0 +1,115 @@
+#displayData{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.parent{
+display: flex;
+/* border: 1px solid; */
+/* justify-content: space-evenly; */
+}
+.pics{
+display: flex; 
+/* border: 1px solid;  */
+border-color: red;
+/* position: fixed; */
+/* margin-left: -800px; */
+margin-right: 20px;
+/* float: left; */
+}
+.small_image{
+max-width: 10%;
+margin-top: 20px;
+}
+.small_image>div{
+padding: 5px;
+
+}
+.small_image>div>img{
+width: 38px;
+height: 51px;
+cursor: pointer;
+}
+#big_image{
+width: 70%;
+padding-left: 50px;
+padding-right: -30px;
+
+}
+#big_image img{
+width: 340px;
+height: 350px;
+
+}
+input[type=radio] {
+border: 0px;
+width: 100%;
+height: 1.5em;
+margin-left: -120px;
+
+}
+input[type=radio]{
+accent-color: orangered;
+}
+#pricesector{
+margin-left: -60px;
+
+}
+#package{
+padding: 5px 60px 5px 10px;
+border: 1px solid;
+border-color: rgba(128, 128, 128, 0.905);
+
+}
+#btn{
+width: 70%;
+margin-left: 80px;
+margin-top: 20px;
+padding: 10px 0 10px 0;
+background-color: rgb(234, 111, 66);
+border: none;
+border-radius: 10px;
+color: white;
+font-size: large;
+}
+#cartsection{
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+border-radius: 10px;
+width: 40%;
+height: 300px;
+}
+#rating{
+    background-color: green;
+    border-radius: 5px;
+    padding: 4px;
+    color: white;
+    width: 100%; 
+    
+}
+
+#ratediv{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+#rate{
+    color: orangered;
+    font-size: larger;
+}
+.icon{
+    color: white;
+}
+#size{
+    display: flex;
+    gap: 10px;
+}
+#size p{
+    border: 2px solid;
+    padding: 10px;
+    border-color: orangered;
+    border-radius: 10px;
+    color: orangered;
+   
+}
