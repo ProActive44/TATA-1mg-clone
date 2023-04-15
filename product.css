@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+h2, h3, h4 {
+    color: #1a1a1a;
+}
+h1{
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* --------------------------------------- */
+
+ul , li , a{
+    font-size: 12px;
+    color: #212121;
+    text-decoration: none;
+    list-style-type: none; 
+}
+
+.main_body{
+    display: flex;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+    margin: 50px 40px;
+}
+
+#filter{
+    width: 20%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+#filter:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+h3{
+    margin: 20px 0 10px 0;
+    font-weight: 900;
+}
+
+#filter input[type="checkbox"]{
+    cursor: pointer;
+}
+
+#filter ul li{
+    padding: 8px 0;
+}
+    
+#filter ul li:hover{        
+    cursor: pointer;
+    font-weight: 600;
+    color: tomato;
+}
+
+#filter .selectedcolor {
+     color: red;
+}
+
+#filter input[type="text"] {
+    /* color: green; */
+    /* outline-color: grey; */
+    border: 2px solid tomato;
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+#filter label:hover{
+    cursor: pointer;
+}
+
+/* ------------------------------------------------ */
+
+
+/* products */
+
+#products h2{
+    font-size: 18px;
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #212121;
+    margin: 40px 0 10px 30px;
+}
+
+#products{
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 10px 40px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    /* padding: 0px 200px 0 40px; */
+    /* overflow: hidden; */
+}
+
+.products-Container-card{
+  padding: 20px 10px;
+    min-width: 170px ;
+    /* overflow: hidden; */
+    text-align: left;
+    min-height: 300px;
+    cursor: pointer;
+    width: 300px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.products-Container-card:hover{
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  }
+
+.products-Container-card img{
+    max-height: 100%;
+    max-width: 100%;
+    /* width: auto;
+    height: auto; */
+    /* position: absolute; */
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    /* margin: auto; */
+    /* width: 90%; */
+}
+
+.products-Container-card h3{
+    font-size: 14px;
+    height: 35px;
+    overflow: hidden;
+    color: #212121;
+    word-wrap: break-word;
+    /* overflow: hidden; */
+    font-family: "Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin: 10px 0;
+}
+
+.products-Container-card p{
+    font-size: 12px;
+    color: #757575;
+    white-space: nowrap;
+    max-width: 100%;
+    /* overflow: hidden; */
+}
+
+.products-Container-card .oldPriceDiv{
+    display: flex;
+    gap: 5%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.products-Container-card .oldPriceDiv .discount{
+    color: #1aab2a;
+}
+
+.products-Container-card .price{
+    /* font-size: 14px; */
+    font-weight: 700;
+    display: inline-block;
+    font-size: 16px;
+    color: #212121;
+}
+
+#products > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addToCart {
+    text-align: center;
+    font-weight: 700;
+    /* align-self:flex-end; */
+    /* position: absolute; */
+    margin: -25px 0px 5px 0;
+    align-self: end;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 5px 10px;
+    /* height: 1.7rem; */
+    /* font-size: .75rem; */
+    /* display: inline-block; */
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    right: 0;
+    width: 50%;
+}
+.addToCart:hover{
+    background-color: #fa5647;
+}
+
+/* ------------------------------------------- */
+
+
+/* ----- Footer ------------- */
+
+/* India's Largest Health-Care Platform */
+#topbar{
+    text-align: center;
+
+}
+.topbar-last{
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 300px; */
+    padding: 30px;
+}
+.topbar-last div{
+    padding: 5px;
+}
+
+.topbar-last .numbers{
+    font-size: larger;
+    font-weight: 1000;
+    color: black;
+}
+.topbar-last .numberDesc{
+    font-size:medium;
+    font-weight:500;
+    color: black;
+}
+
+/* Rooler */
+#centerd-line-in-footer{
+    margin: 10px 100px;
+    /* padding: 1px;        */
+    border: 2px solid black;
+    border-radius: 100px;
+    opacity: 0.5;
+}
+
+/* Download our App */
+#download-our-app{
+  padding: 16px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#download-our-app .get-link{
+    font-size: 20px;
+}
+.enter-mobile-number-div button{
+    border-radius: 4px;
+    background-color: #ff6f61;
+    width: 112px;
+    height: 40px;
+    margin-left: 8px;
+    border: none;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.enter-mobile-number-div button:hover{
+    cursor: pointer;
+    background-color: #fc5142;
+}
+
+.enter-mobile-number-div input{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #000;
+    height: 40px;
+    width: 300px;
+    background-color: #f1f4f6;
+    padding-left: 15px;
+    vertical-align: middle;
+}
+
+/* know-us-divs */
+
+#know-us-divs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 50px;
+}
+
+#know-us-divs h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#know-us-divs li{
+    /* text-decoration: none; */
+    list-style-type: none;
+    font-size: 13px;
+}
+
+#know-us-divs li:hover{
+    color: #000;
+}
+
+#know-us-divs .KNOW_US{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#know-us-divs .KNOW_US ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+#know-us-divs img{
+    width: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#know-us-divs .social-media img{
+    padding: 3px;
+}
+#know-us-divs .KNOW_US .logos{
+    width: 90%;
+    border-radius: 5px;
+}
+
+#seachbtn{
+    border-radius: 5px 2px 2px 5px ;
+    margin: -45px 0 0 0;
+    
+}
+
+#resetbtn{
+    border-radius: 5px 2px 2px 5px ;
+    margin: -19px 110px 0 0;
+}
+
+
+
+
+/* ----- Pagination ----------------- */
+
+#pagination-div{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    padding: 0 0 50px 0;
+    margin-left: 100px;
+}
+
+#pagination-div .pagination{
+    font-weight: 600;
+    font-size: large;
+    border-radius: 10px;
+    background-color: #ff6f61;
+    width: 100px;
+    height: 40px;
+    margin-left: 8px;
+    border: none;
+    vertical-align: middle;
+    color: black;
+}
+
+#pagination-div .pagination:hover{
+    background-color: #f74838;
+    color: #fff;
+}
+
+#currentPage{
+    font-size: large;
+    font-weight: 600;
+}
+
+#horiRuller{
+    padding: 1px;
+    background-color: #757373;
+    margin: 0 10px;
+    margin-bottom: 50px;
+}
+
+
+
+@media screen and (max-width: 1050px){
+    
+    #filter{
+        flex-direction: row;
+        width: 100%;
+        border: 2px solid red;
+    }
+}
+@media screen and (max-width: 871px){
+
+#filter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 2px solid red;
+    /* padding-right: 200px; */
+}
+#products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+}
+@media screen and (max-width: 560px){
+   
+}
+@media screen and (max-width: 410px){
+    
+    
+}

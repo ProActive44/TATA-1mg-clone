@@ -26,7 +26,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   
     if (storedUserData && email === storedUserData.email && password === storedUserData.password) {
       alert("Login successful");
-      window.location.href = './components/navbar.html';
+      window.location.href = "index.html";
 
       localStorage.setItem('userName', storedUserData.name);
     } 

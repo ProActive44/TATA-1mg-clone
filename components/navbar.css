@@ -263,10 +263,11 @@
         margin: 20px 0;
       }
       #navbar-middle-search i {
-        display: flex;
+        display: none;
+        /* display: flex;
         position: fixed;
         right: 10%;
-        margin-top: -30px;
+        margin-top: -30px; */
       }
 }
 

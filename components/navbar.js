@@ -29,8 +29,8 @@ export default function navbar() {
         </div>
         <div id="navbar-top-options2">
             <div class="login_signup">
-                <span id="login_button"><a href="../login.html">Login</a></span> 
-                | <span id="signup_button"><a href="../signup.html">Signup</a></span>
+                <span id="login_button"><a href="login.html">Login</a></span> 
+                | <span id="signup_button"><a href="signup.html">Signup</a></span>
             </div> 
             <div class="offers">
                 <a>Offers</a>
@@ -97,7 +97,7 @@ export default function navbar() {
                 <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1570695364/quick_buy_rebrand_lqpnce.svg" />
             </div>
             <div class="discount_tag">QUICK BUY! Flat 15% off on medicines*</div>
-            <button class="quick-order">Quick Order</button>
+            <button class="quick-order">Quick Order</button onclick="goToProducts()">
         </div>
     </div>
     
@@ -163,29 +163,4 @@ export default function navbar() {
         
     </div>
 </div>`
-}
-
-
-let userName = localStorage.getItem('userName');
-
-if(userName === null){
-    document.getElementById("login_button").addEventListener("click", function() {
-        // Redirect to login.html when login button is clicked
-        window.location.href = "login.html";
-    });
-
-    document.getElementById("signup_button").addEventListener("click", function() {
-        // Redirect to signup.html when signup button is clicked
-        window.location.href = "signup.html";
-    });
-}
-else{
-    // Update the login button text with user name
-    document.getElementById("login_button").innerHTML = `Welcome, ${userName}`;
-    // Disable the login button link
-    document.getElementById("login_button").href = "#";
-    // Hide the vertical line between the login and signup buttons
-    document.getElementById("login_button").nextSibling.textContent = "";
-    // Update the signup button text with user name
-    document.getElementById("signup_button").textContent = "";
 }

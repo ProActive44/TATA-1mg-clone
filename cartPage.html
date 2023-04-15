@@ -1,521 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Cart</title>
-    <style>
 
-      *{
-        font-family: Arial,Arial, Helvetica, sans-serif;
-      }
-        nav{
-    /* border: 1px solid red; */
-    display: flex;
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Cart Page</title>
 
-}
-nav>div:nth-child(2){
-    /* border: 1px solid; */
-    width: 60%;
-    margin-left: 0.5%;
-    height: 30px;
-    margin-top: 4px;
-}
-#search{
-    border:none;
-    width: 90%;
-    height: 80%;
-    border-radius: 3px;
-    background-color: #f1f4f6;
-    margin-top: 4px;
+  <!-- tab icon -->
+  <link rel="icon" href="https://www.1mg.com/faviconRebrand.ico" />
+  <!-- fontawsome icons -->
+  <script src="https://kit.fontawesome.com/f7dfcdf24b.js" crossorigin="anonymous"></script>
 
-}
-nav>div:nth-child(1){
-    /* border: 1px solid; */
-    width: 10%;
-    margin-left: 1%;
-    border: none;
-    
-}
-nav>div:nth-child(3){
-    /* border: 1px solid; */
-    width: 10%;
-    margin-left: 18%;
-    
-}
-p{
-    /* border: 1px solid red; */
+  <link rel="stylesheet" href="cartPage.css">
+  <!-- <link rel="stylesheet" href="./components/"> -->
 
-    text-decoration: none;
+</head>
 
-}
-        body{
-  margin: 0%;
-  background: whitesmoke;
-  font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
-}
-/* header */
-#payment_header{
- display: flex;
- justify-content: space-between;
- align-items: center;
- background: white;
- padding-left: 2%;
- padding-right: 2%;
- height: 55px;
-}
-#mg_home{
-  cursor: pointer;
-}
-#need_help{
-  cursor: pointer;
-}
-#payment_header>div>img:nth-child(2){
-  margin-left: 30px;
-  height: 60px;
-}
-/* footer */
-
-/* footer */
-#payment_footer{
-  display: flex;
-  width: 80%;
-  margin: auto;
- }
- #payment_footer>div{
-  border-top: 1px solid darkgray;
-  margin-right: 1%;
- }
- #payment_footer>div:nth-child(2){
-    width: 30%;
- }
- #payment_footer>div:nth-child(1){
-    width: 60%;
- }
- #payment_footer>div>p{
-    font-size: 11px;
-    color: lightslategray;
- }
- #payment_footer>div>p>span{
-    color: lightsalmon;
- }
-
-
-
-#empty_img {
-  width: 160px;
-}
-#add_medicines {
-  /* width: 150px; */
-  background-color: #ff6f61;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  padding: 10px;
-}
-#add_medicines:hover {
-  background: #fc6456;
-}
-#container {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  /* padding-left: 50px; */
-}
-#now{
-  display: flex;
-  /* border: 1px solid; */
-  justify-content: space-around;
-}
-#cart_items {
-  /* border: #fc6456 1px solid; */
-  width:60%;
-  /* height: 100px; */
-  /* margin-right: 30px;
-  margin-left: 50px; */
-  background: white;
-
-  padding: 20px;
-}
-#cart_total {
-  width: 40%;
-  /* border: springgreen 1px solid; */
-  /* height: 100px; */
-  background: white;
-  padding: 20px;
-}
-#dsc_prc {
-  color: gray;
-  text-decoration: line-through;
-}
-#plus {
-  background: #fc6456;
-  border: #fc6456 1px solid;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  /* border: 1px solid red; */
-}
-#minus {
-  background: white;
-  color: #fc6456;
-  border: #fc6456 1px solid;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-right: 5px;
-  /* border: 1px solid red; */
-}
-#del {
-  border: none;
-  color: gray;
-  background: white;
-  /* border: 1px solid red; */
-}
-.p_class {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-}
-#tbp {
-  font-size: 18px;
-  font-weight: bold;
-  color: gray;
-}
-#total_g {
-  background: #e4f6e7;
-  height: 40px;
-  align-items: center;
-  padding: 0% 5px;
-  border-radius: 5px;
-}
-#ttl_dsc {
-  color: #1aab2a;
-  font-weight: bolder;
-  font-size: 16px;
-}
-#chkout {
-  width: 100%;
-  background-color: #ff6f61;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-}
-#chkout:hover {
-  background: #fc6456;
-}
-
-
-.coupon{
-  /* border: 1px solid red; */
-  width: 30%;
-  height: 230px;
-}
-.buts{
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1%;
-  padding: 10px;
- width: 95%;
-}
-
-.knowore,
-.addtocart{
-  display: block;
-  /* border: 1px solid red; */
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  }
-
-.but-1,
-.but-2{
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  font-size: 20px;
-  border: 1px solid #ff6f61;
-  border-radius: 3px;
-  color: #ff6f61;;
-}
-
-.but-2{
-  background-color: #ff6f61;
-  color: white;
-}
-.applycoupon{
-  display: flex;
- 
-  /* border: 1px solid; */
-
-}
-.imgcoup,.apcoupon{
-  margin-left: 2%;
-  font-weight:bold;
-  font-size: 15px;
-}
-#payfoto{
-  /* border: 1px solid; */
-  width: 100%;
-  display: flex;
-}
-
-    </style>
-  </head>
-  <body>
-    <nav>
-        <div><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt=""></div>
-        <div>
-            <input type="text" id="search" placeholder="Search for Medicines and Health Products">
-        </div>
-        <div>
-            <a href=""><p>Need help ?</p></a>
-        </div>
-       </nav>
-
- </div>
- <div class="right" id="righ">
-  <div id="now">
-    <div id="cart_items"></div>
-  
-                <div class="coupon">
-                    <div class="imagecoup">
-                        <img src="https://onemg.gumlet.io/image/upload/v1625657833/ekjkxafxcqqg0oinr3fu.png" alt="">
-                    </div>
-                    <div class="save">
-                        You can save extra <span class="rupee">&#8377</span>21 on this order
-                    </div>
-                    <div class="member">
-                        Become a member
-                    </div>
-                    <div class="careplan">
-                        Care plan membership <span class="rmembe">&#8377 149 <del class="delete">549 </del>/3</span>
-                    </div>
-                    <div class="buts">
-                        <div class="knowore">
-                            <button class="but-1">Know More</button>
-                        </div>
-                        <div class="addtocart">
-                            <button class="but-2">Add to cart</button>
-                        </div>
-
-                    </div>
-                    <hr class="grey">
-                    <div class="applycoupon">
-                        <div class="imgcoup">
-                            <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1607414999/marketing/cvtnx1zh5we6atn3m7i0.svg" alt="">
-                        </div>
-                        <div class="apcoupon" id="applycoupon" onclick="couponmodal()">Apply Coupon</div>
-                        <!-- coupon code -->
-                        
-
-                    </div>
-                </div>
-              </div>
-
-    <div id="container">
-     <div id="payfoto">
-      <div id="img">
-        <div>
-          <img src="1mg image/Capture.PNG" alt="">
-        </div>
-        <div>
-          <img src="1mg image/Capture1.PNG" alt="">
-          
-        </div>
-        <div>
-          <img src="1mg image/Capture3.PNG" alt="">
-        </div>
-      </div>
-      <div id="cart_total">
-        <p class="p_class">
-          <span>Item Total(MRP)</span><span id="itm_total"></span>
-        </p>
-        <p class="p_class">
-          <span>Price Discount</span><span id="ttl_dsc1"></span>
-        </p>
-        <hr />
-        <p class="p_class">
-          <span>Shipping Fee</span><span>As per delviery address</span>
-        </p>
-        <p class="p_class">
-          <span>Safety Handling Fee</span><span>Rs. 10</span>
-        </p>
-        <hr />
-        <p class="p_class" id="tbp">
-          <span>To be paid</span><span id="ttl"></span>
-        </p>
-        <p class="p_class" id="total_g">
-          <span>Total Savings</span><span id="ttl_dsc"></span>
-        </p>
-        <a href="payment.html"><button id="chkout">CHECKOUT</button></a>
-      </div>
+<body>
+  <!-- navbar--------- -->
+  <nav>
+    <div><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt=""></div>
+    <div>
+      <input type="text" id="search" placeholder="Search for Medicines and Health Products">
     </div>
-      <!-- image -->
-      
-  </div>
-    <div id="payment_footer">
-        <div>
-            <p>1mg is a technology platform to facilitate transaction of business. The products and services are offered for sale by the sellers. The user authorizes the delivery personel to be his agent for delivery of the goods. For details read <span>terms and conditions.</span></p>
-        </div>
-        <div>
-          <p>*1mgCash will be credited 7 days after your complete order is delivered in case of Products and in case of Lab Services 1mgCash will be credited within 24 hours from the time of generation of test report. 1mgCash will not be credited in case a return request is initiated for the order.</p> 
-          <p>**Coupon Discount value may change if the total order value changes.</p> 
+    <div>
+      <a href="">
+        <p>Need help ?</p>
+      </a>
+    </div>
+</nav>
+<!-- ------------------- -->
+
+
+
+<div class="pDiv">
+    <div>
+        <h2>My Cart</h2>
+    </div>
+    <div class="productsDiv">
+    </div>
+</div>
+<div class="grandTotalDiv">
+    <div class="locationDiv">
+        <div class="delivery">
         </div>
     </div>
-  </body>
+
+    <div class="GTotalDiv">
+
+    </div>
+</div>
+
+
+<footer id="footer"></footer>
+
+<!-- -------------------- -->
+</body>
+
 </html>
-<script>
-    var cartItemsArr = JSON.parse(localStorage.getItem("data")) || [];
 
-if (cartItemsArr.length == 0) {
-  let div = document.createElement("div");
-  let img = document.createElement("img");
-  img.src = "https://www.1mg.com/images/online_consultation/empty-cart-icon.svg";
-  let h3 = document.createElement("h3");
-  h3.textContent = "Oops!";
-  let p = document.createElement("p");
-  p.textContent = "Looks like there is no item in your cart yet.";
-  let m_button = document.createElement("button");
-  m_button.id = "add_medicines";
-  m_button.textContent = "ADD MEDICINES";
-  m_button.addEventListener("click", function () {
-    window.location.href = "index.html";  //productpage
-  });
-  div.append(img, h3, p, m_button);
-  div.style.textAlign = "center";
-  div.style.margin = "auto";
-  img.id = "empty_img";
-  let a = document.getElementById("container");
-  a.innerHTML = "";
-  a.append(div);
-} else {
-  let a = document.getElementById("cart_items");
- 
-  let c = document.getElementById("cart_total");
-  
+    <script src="./cartPage.js" type="module"></script>
+</body>
 
-  let total_price = 0;
-  let total_discount = 0;
-  let total_d = 0;
-  function displayArr(cartItemsArr) {
-    
-    cartItemsArr.map((element) => {
-      let count = 1;
-      let b = document.createElement("div");
-      b.style.display = "flex";
-      let { name, quantity, mrp, price } = element;
-      let temp = document.createElement("div");
-      let temp1 = document.createElement("div");
-      temp.style.width = "50%";
-      temp1.style.width = "50%";
-      temp1.style.textAlign = "right";
-      let h2 = document.createElement("h3");
-      let price_h2 = document.createElement("h3");
-      let org_price = document.createElement("h5");
-      org_price.id = "dsc_prc";
-      let cnt = document.createElement("span");
-      let qty = document.createElement("p");
-      let plus = document.createElement("button");
-      let minus = document.createElement("button");
-      let del = document.createElement("button");
-      let removeimage = document.createElement("img");
-        removeimage.src = "https://img.1mg.com/images/delete_icon.svg"
-      del.addEventListener("click", function (index) {
-        cartItemsArr.splice(index, 1);
-        // count--;
-        localStorage.setItem("data", JSON.stringify(cartItemsArr));
-        displayArr(cartItemsArr);
-        location.reload();
-      });
-      plus.addEventListener("click", function () {
-       
-      
-        let arr = JSON.parse(localStorage.getItem("data"));
-        count++;
-        
-        price_h2.textContent = `Rs. ${+price * count}`;
-        cnt.textContent = count;
-        total_price = +price * count;
-        total_discount = +mrp * count;
-        displayArr(arr);
-        
-      });
-       minus.addEventListener("click", function () {
-       
-        let arr = JSON.parse(localStorage.getItem("data"));
-        count--;
-        
-        price_h2.textContent = `Rs. ${+price * count}`;
-        cnt.textContent = count;
-        total_price = +price * count;
-        total_discount = +mrp * count;
-        displayArr(arr);
-        location.reload; 
-      });
-
-
-      plus.textContent = "+";
-      minus.textContent = "-";
-      plus.id = "plus";
-      minus.id = "minus";
-      del.id = "del";
-      del.textContent = "Remove";
-      price_h2.textContent = `Rs. ${price}`;
-      org_price.textContent = `Rs. ${mrp}`;
-      h2.textContent = name;
-      qty.textContent = 1;
-      temp.append(h2,removeimage, del);
-      temp1.append(price_h2, org_price,plus,cnt,minus);
-      b.append(temp, temp1);
-      a.append(b);
-
-
-      total_price += +mrp;
-      total_discount += +price;
-    });
-    total_d = total_discount + 10;
-    document.getElementById("itm_total").textContent = total_price;
-    document.getElementById("ttl_dsc1").textContent =
-      total_price - total_discount;
-    document.getElementById("ttl_dsc").textContent =
-      total_price - total_discount;
-    document.getElementById("ttl").textContent = total_d;
-    let price_arr = [];
-    price_arr.push(total_price, total_discount, total_d);
-    localStorage.setItem("price_data", JSON.stringify(price_arr));
-    var pricekey = JSON.parse(localStorage.getItem("price_data")) || [];
-    console.log(pricekey)
-    console.log(total_price,total_discount,total_d)
-  }
-}
-
-// document.getElementById("chkout").addEventListener("click", function () {
-//   let user_login = JSON.parse(localStorage.getItem("user_login"));
-//   if(user_login==true){
-//     window.location.href = "address.html"; 
-//   }else{
-//     alert('Please login In first');
-//     window.location.href = "login.html";
-//   }
-  
-// });
-// document.querySelector("#mg_home").addEventListener("click", () => {
-//   window.location.href = "index.html";
-// });
-// document.querySelector("#need_help").addEventListener("click", () => {
-//   window.location.href = "NeedHelp.html";
-// });
-
-displayArr(cartItemsArr);
-</script>
+</html>

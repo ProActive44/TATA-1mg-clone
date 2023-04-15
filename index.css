@@ -1374,3 +1374,30 @@ h1{
     width: 90%;
     border-radius: 5px;
 }
+
+
+
+/* ------------------------ */
+
+.debounceList{
+    list-style-type: none;
+    font-size: 13px;
+    padding-bottom: 5px;
+   border-bottom: 1px solid rgb(189, 185, 185);
+}
+
+#results{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    margin: -30px 0 0 200px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    gap: 10px;
+    border-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
