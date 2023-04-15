@@ -1,5 +1,18 @@
-import navbar from "../navbar.js";
+import navbar from "./components/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
+
+
+// footer part
+import footer from "./components/footer.js"
+document.getElementById("footer").innerHTML = footer();
+
+
+// connect to product page
+
+let goToProducts = ()=>{
+  window.location.href = "product.html";
+}
+// goToProducts()
 
 // ----- For Slideshow in part-1 ---------------------------------------
 var counter = 1;
@@ -516,6 +529,9 @@ let displaydata = (data, container) => {
     if (idx === 0) {
       div.classList = "first part-8-Container-card";
     }
+    div.addEventListener("click", function(){
+      goToProducts()
+    })
 
     let img = document.createElement("img");
     img.src = ele.image;
@@ -625,6 +641,8 @@ getdata("https://onemg-server-1muy.onrender.com/FootHealth", FootHealth)
 
 
 
+
+
 // getdata("https://onemg-server-1muy.onrender.com/cart", Bodymassagers)
 
 // document.querySelector("#part-15 h2").addEventListener("click", deletebtn)
@@ -647,8 +665,88 @@ getdata("https://onemg-server-1muy.onrender.com/FootHealth", FootHealth)
 // }
 
 
-// footer part
 
-import footer from "../footer.js"
 
-document.getElementById("footer").innerHTML = footer();
+
+// from navbar
+
+let userName = localStorage.getItem('userName');
+
+if(userName === null){
+    document.getElementById("login_button").addEventListener("click", function() {
+        // Redirect to login.html when login button is clicked
+        window.location.href = "login.html";
+    });
+
+    document.getElementById("signup_button").addEventListener("click", function() {
+        // Redirect to signup.html when signup button is clicked
+        window.location.href = "signup.html";
+    });
+}
+else{
+    // Update the login button text with user name
+    document.getElementById("login_button").innerHTML = `Welcome, ${userName}`;
+    // Disable the login button link
+    document.getElementById("login_button").href = "#";
+    // Hide the vertical line between the login and signup buttons
+    document.getElementById("login_button").nextSibling.textContent = "";
+    // Update the signup button text with user name
+    document.getElementById("signup_button").textContent = "";
+}
+
+
+
+// searchbar debouncing  -----------------------------------------------------------------
+
+const searchInput = document.querySelector(".search_input");
+    const resultsList = document.getElementById('results');
+    
+    const debounce = function (fn, d) {
+      let timer;
+      return function () {
+        let context = this,
+            args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          fn.apply(context, args);
+        }, d);
+      };
+    };
+    
+    function goToProductdetails(){
+        window.location.href = "product.html"   
+    }
+
+
+    const search = debounce(function () {
+      const query = searchInput.value;
+      if(query === ""){
+        resultsList.innerHTML = '';
+        resultsList.style.display = "none";
+        return;
+      }
+      fetch(`https://onemg-server-1muy.onrender.com/ALLProducts?q=${query}`)
+        .then(response => response.json())
+        .then(data => {
+          resultsList.innerHTML = '';
+          resultsList.style.display = "none";
+          data.forEach(result => {
+            const li = document.createElement('li');
+            li.classList = "debounceList"
+            li.textContent = result.title;
+            resultsList.appendChild(li);
+            resultsList.style.display = "flex";
+            
+            li.addEventListener("click", function(){
+              goToProductdetails();
+            })
+          });
+        })
+        .catch(error => console.log(error));
+      }, 500);
+      
+      
+      searchInput.addEventListener('input', search);
+      resultsList.style.display = "none";
+
+    // ------------------------------------------------------------------------

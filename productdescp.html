@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="product.html">
     <!-- <link rel="stylesheet" href="product.html"> -->
     <link rel="stylesheet" href="productdescp.css">
+    <link rel="stylesheet" href="./components/navbar.css">
+    <!-- tab icon -->
+    <link rel="icon" href="https://www.1mg.com/faviconRebrand.ico" />
+     <!-- fontawsome icons -->
+     <script src="https://kit.fontawesome.com/f7dfcdf24b.js" crossorigin="anonymous"></script>
    
 </head>
 <body>
+
+  <nav id="navbar"></nav>
 
 <div id="displayData">
     <div class="parent">
@@ -19,28 +26,28 @@
                 <div id="img_box">
                   <img 
                     id="muliple_img1"
-                    src="https://greenleafonline.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/6/1/61g5i8q5tpl._sl1100_.jpg"
+                    src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/38b86c6a33f744afac80ed36d4bb87ba.jpg"
                     alt=""
                   />
                 </div>
                 <div>
                   <img
                     id="muliple_img2"
-                    src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/617tDPFQcrL._SY450_.jpg"
+                    src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/c2sw0gi2dw4cwdf1ecjp.jpg"
                     alt=""
                   />
                 </div>
                 <div>
                   <img
                     id="muliple_img3"
-                    src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vd2tEV7HL._SX679_.jpg"
+                    src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/537fd698-25dd-43d5-b5f7-02a997bcd33a.jpeg"
                     alt=""
                   />
                 </div>
                 <div>
                   <img
                     id="muliple_img4"
-                    src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51aeik7YMqL.jpg"
+                    src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/qir6i2zlhzeddxa4mqt0.jpg"
                     alt=""
                   />
                 </div>
@@ -51,7 +58,7 @@
                 <div  id="big_image">
                   <img
                     id="main_img_1"
-                    src="https://nmedicines.in/media/catalog/product/cache/11/image/586x/040ec09b1e35df139433887a97daa66f/d/e/dettol-liquid-menthol-cool-sr.jpg"
+                    src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/537fd698-25dd-43d5-b5f7-02a997bcd33a.jpeg"
                     alt=""
                   />
                 </div>
@@ -70,14 +77,14 @@
         </div>
         <div id="ratediv"> 
             <div><p id="rating">4.1 <span class="icon">★</span></p></div>  
-            <div><p id="rate">Ratings & 1 Reviews</p></div>
+            <div><p id="rate">Ratings & 989 Reviews</p></div>
         </div>
        
-        <h3>Pack Size</h3>
+        <!-- <h3>Pack Size</h3>
         <div id="size">
             <div><p>100ml Liquid</p></div>
             <div><p>200ml Liquid</p></div>
-        </div>
+        </div> -->
         <div>
             <ul>
                 <h3>Product highlights</h3>
@@ -95,17 +102,21 @@
             <div>160 people bought this recently</div>
         </div>
         <div id="pricesector" >
-            <div>
-                <input type="radio">
-                 <div>
-                    <div id="price"></div>
-                    <div id="originalprice"></div>
+            <div id="currentPriceandMRP">
+                <input type="radio" id="radio1">
+                 <div  class="secondDivinpricesector">
+                  <div >
+                    ₹<label for="radio1" id="price"></label>
+                  </div>
+                    <div >
+                      ₹<s id="originalprice"></s>
+                    </div>
                     <div ><span id="discount"></span></div>
                  </div>
             </div>
             <div style="display: flex;padding-left: -100px;">
-                <input type="radio"  >
-                <!-- <label for=""><span id="price"></span> + free shipping and 3% Extra NeuCoins with</label> -->
+                <!-- <input type="radio"  > -->
+                <label for=""><span></span> + free shipping and 3% Extra NeuCoins with</label>
             </div>
         </div>
        <p style="margin-left: 60px;">Inclusive of all taxes</p>
@@ -117,7 +128,9 @@
        <div><button id="btn">ADD TO CART</button></div>
     </div>
 </div>
+
+   <footer id="footer"></footer>
 </body>
 </html>
 
-<script src="productdescp.js"></script>
+<script src="productdescp.js" type="module"></script>

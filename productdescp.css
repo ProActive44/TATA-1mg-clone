@@ -1,3 +1,10 @@
+/* Navbar Overriding Css */
+
+.text_inside_first_header_row a{
+    font-size: 12px;
+}
+/* ------------------- */
+
 #displayData{
     display: flex;
     margin-left: 100px;
@@ -54,9 +61,21 @@ input[type=radio]{
 accent-color: orangered;
 }
 #pricesector{
-margin-left: -60px;
+margin-left: 60px;
+margin-top: 20px;
+}
+#currentPriceandMRP{
+   display: flex;
+   gap: 0;
 
 }
+.secondDivinpricesector{
+    margin-left: -70px;
+    font-size: large;
+    font-weight: 600;
+}
+
+
 #package{
 padding: 5px 60px 5px 10px;
 border: 1px solid;
@@ -65,7 +84,7 @@ border-color: rgba(128, 128, 128, 0.905);
 }
 #btn{
 width: 70%;
-margin-left: 80px;
+margin-left: 40px;
 margin-top: 20px;
 padding: 10px 0 10px 0;
 background-color: rgb(234, 111, 66);
@@ -78,7 +97,7 @@ font-size: large;
 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 border-radius: 10px;
 width: 40%;
-height: 300px;
+/* height: 300px; */
 }
 #rating{
     background-color: green;
@@ -112,4 +131,163 @@ height: 300px;
     border-radius: 10px;
     color: orangered;
    
+}
+
+*{
+    /* border: 1px solid red; */
+}
+
+
+/* ---- */
+#description{
+    margin-left: -20px;
+}
+#name h2{
+    font-size: large;
+    padding: 0 20px;
+}
+
+#brand{
+    margin-left: 20px;
+}
+
+#ratediv{
+    margin-left: 20px;
+}
+
+#main_img_1{
+    padding: 0;
+    margin: 0;
+}
+#big_image{
+    padding: 10px 10px 0 20px;
+    margin: 0;
+}
+
+
+
+
+/* ----- Footer ------------- */
+
+/* India's Largest Health-Care Platform */
+#topbar{
+    text-align: center;
+
+}
+.topbar-last{
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 300px; */
+    padding: 30px;
+}
+.topbar-last div{
+    padding: 5px;
+}
+
+.topbar-last .numbers{
+    font-size: larger;
+    font-weight: 1000;
+    color: black;
+}
+.topbar-last .numberDesc{
+    font-size:medium;
+    font-weight:500;
+    color: black;
+}
+
+/* Rooler */
+#centerd-line-in-footer{
+    margin: 10px 100px;
+    /* padding: 1px;        */
+    border: 2px solid black;
+    border-radius: 100px;
+    opacity: 0.5;
+}
+
+/* Download our App */
+#download-our-app{
+  padding: 16px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#download-our-app .get-link{
+    font-size: 20px;
+}
+.enter-mobile-number-div button{
+    border-radius: 4px;
+    background-color: #ff6f61;
+    width: 112px;
+    height: 40px;
+    margin-left: 8px;
+    border: none;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.enter-mobile-number-div button:hover{
+    cursor: pointer;
+    background-color: #fc5142;
+}
+
+.enter-mobile-number-div input{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #000;
+    height: 40px;
+    width: 300px;
+    background-color: #f1f4f6;
+    padding-left: 15px;
+    vertical-align: middle;
+}
+
+/* know-us-divs */
+
+#know-us-divs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 50px;
+}
+
+#know-us-divs h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#know-us-divs li{
+    /* text-decoration: none; */
+    list-style-type: none;
+    font-size: 13px;
+}
+
+#know-us-divs li:hover{
+    color: #000;
+}
+
+#know-us-divs .KNOW_US{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#know-us-divs .KNOW_US ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+#know-us-divs img{
+    width: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#know-us-divs .social-media img{
+    padding: 3px;
+}
+#know-us-divs .KNOW_US .logos{
+    width: 90%;
+    border-radius: 5px;
 }
