@@ -1,9 +1,9 @@
-import navbar from "./components/navbar.js";
+import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
 
 
 // footer part
-import footer from "./components/footer.js"
+import footer from "../components/footer.js";
 document.getElementById("footer").innerHTML = footer();
 
 
