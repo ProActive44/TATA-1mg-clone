@@ -44,9 +44,9 @@ function products(data) {
     var imgD = document.createElement("div");
     imgD.setAttribute("class", "imgD");
 
-    var imgLink = document.createElement("img");
-    imgLink.setAttribute("class", "imgLink");
-    imgLink.setAttribute("src", ele.img_1);
+    // var imgLink = document.createElement("img");
+    // imgLink.setAttribute("class", "imgLink");
+    // imgLink.setAttribute("src", ele.img);
 
     // imgD.append(imgLink);
 

@@ -6,104 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page</title>
     <link rel="stylesheet" href="./style/product.css" />
-    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/navbar.css" />
     <!-- tab icon -->
     <link rel="icon" href="https://www.1mg.com/faviconRebrand.ico" />
-     <!-- fontawsome icons -->
-     <script src="https://kit.fontawesome.com/f7dfcdf24b.js" crossorigin="anonymous"></script>
+    <!-- fontawsome icons -->
+    <script
+      src="https://kit.fontawesome.com/f7dfcdf24b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav id="navbar"></nav>
 
     <div class="main_body">
       <div id="filter">
-        <!-- <ul id="categories">
-          <h3>CATEGORIES</h3>
-          <li id="
-          " onclick="changecolor(first)">
-             Popular Combo Deals
-          </li>
-          <li id="second" onclick="changecolor(second)"> Calcium Supplement</li>
-          <li id="third" onclick="changecolor(third)"> Spotlight</li>
-          <li id="four" onclick="changecolor(four)"> Treading</li>
-          <li id="five" onclick="changecolor(five)"> Breakfast</li>
-          <li id="six" onclick="changecolor(six)"> FootHealth</li>
-          <li id="seven" onclick="changecolor(seven)"> All Products</li>
-        </ul>
-
-        <ul> -->
-            <input type="text" placeholder="Search Here" id="searchByBrand"/>
+        <ul>
+          <input type="text" placeholder="Search Here" id="searchByBrand" />
+          <div class="productSearch">
             <button class="addToCart" id="resetbtn">Reset</button>
             <button class="addToCart" id="seachbtn">Search</button>
-            <h2>
-              FILTERS
-            </h2>
-          <h3>
-           <span>CATEGORIES</span> </h3>
-        </ul>
-        <ul id="brand">
-          <li>
-            <input type="checkbox" name="1" id="Popular_Combo_Deals" />
-            <label for="Popular_Combo_Deals">Popular Combo Deals</label>
-          </li>
-          <li>
-            <input type="checkbox" name="2" id="Calcium_supplement"/>
-            <label for="Calcium_supplement">Calcium Supplement</label>
-          </li>
-          <li>
-            <input type="checkbox" name="3" id="Spotlight"/>
-            <label for="Spotlight">Spotlight</label>
-          </li>
-          <li>
-            <input type="checkbox" name="4" id="Treading"/>
-            <label for="Treading">Treading</label>
-          </li>
-          <li>
-            <input type="checkbox" name="5" id="Breakfast"/>
-            <label for="Breakfast">Breakfast</label>
-          </li>
-          <li>
-            <input type="checkbox" name="8" id="Bodymassagers"/>
-            <label for="Bodymassagers">Bodymassagers</label>
-          </li>
-          <li>
-            <input type="checkbox" name="6" id="FootHealth"/>
-            <label for="FootHealth">FootHealth</label>
-          </li>
-          <li>
-            <input type="checkbox" name="7" id="All-Products"/>
-            <label for="All-Products">All Products</label>
-          </li>
-          
+          </div>
         </ul>
 
-        <ul>
-          <h3>
-            <span>SORT BY PRICE</span>
-          </h3>
-          <li>
-            <input type="checkbox" name="1" id="lowToHigh" />
-            <label for="lowToHigh">Low to High</label>
-          </li>
-          <li>
-            <input type="checkbox" name="2" id="highToLow"/>
-            <label for="highToLow">High to Low</label>
-          </li>
-        </ul>
+        <div>
+          <h2>FILTERS</h2>
+          <div>
+            <h3>
+              <span>CATEGORIES</span>
+            </h3>
+
+            <ul id="brand">
+              <li>
+                <input type="checkbox" name="1" id="Popular_Combo_Deals" />
+                <label for="Popular_Combo_Deals">Popular Combo Deals</label>
+              </li>
+              <li>
+                <input type="checkbox" name="2" id="Calcium_supplement" />
+                <label for="Calcium_supplement">Calcium Supplement</label>
+              </li>
+              <li>
+                <input type="checkbox" name="3" id="Spotlight" />
+                <label for="Spotlight">Spotlight</label>
+              </li>
+              <li>
+                <input type="checkbox" name="4" id="Treading" />
+                <label for="Treading">Treading</label>
+              </li>
+              <li>
+                <input type="checkbox" name="5" id="Breakfast" />
+                <label for="Breakfast">Breakfast</label>
+              </li>
+              <li>
+                <input type="checkbox" name="8" id="Bodymassagers" />
+                <label for="Bodymassagers">Bodymassagers</label>
+              </li>
+              <li>
+                <input type="checkbox" name="6" id="FootHealth" />
+                <label for="FootHealth">FootHealth</label>
+              </li>
+              <li>
+                <input type="checkbox" name="7" id="All-Products" />
+                <label for="All-Products">All Products</label>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>
+              <span>SORT BY PRICE</span>
+            </h3>
+            <ul class="sortdown"> 
+              <li>
+                <input type="checkbox" name="1" id="lowToHigh" />
+                <label for="lowToHigh">Low to High</label>
+              </li>
+              <li>
+                <input type="checkbox" name="2" id="highToLow" />
+                <label for="highToLow">High to Low</label>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div id="products"></div>
     </div>
 
     <div id="pagination-div">
-        <button class="pagination">Prev</button>
-        <div id="currentPage">1</div>
-        <button class="pagination">Next</button>
+      <button class="pagination">Prev</button>
+      <div id="currentPage">1</div>
+      <button class="pagination">Next</button>
     </div>
 
     <div id="horiRuller"></div>
 
     <footer id="footer"></footer>
 
+    <script src="/script/config.js"></script>
     <script src="./script/product.js" type="module"></script>
   </body>
 </html>

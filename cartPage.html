@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
 
-  <title>Cart Page</title>
+    <!-- tab icon -->
+    <link rel="icon" href="https://www.1mg.com/faviconRebrand.ico" />
+    <!-- fontawsome icons -->
+    <script
+      src="https://kit.fontawesome.com/f7dfcdf24b.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- tab icon -->
-  <link rel="icon" href="https://www.1mg.com/faviconRebrand.ico" />
-  <!-- fontawsome icons -->
-  <script src="https://kit.fontawesome.com/f7dfcdf24b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/cartPage.css" />
+    <!-- <link rel="stylesheet" href="./components/"> -->
+  </head>
 
-  <link rel="stylesheet" href="./style/cartPage.css">
-  <!-- <link rel="stylesheet" href="./components/"> -->
-
-</head>
-
-<body>
-  <!-- navbar--------- -->
-  <nav>
-    <div><a href="index.html"><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt=""></a></div>
-    <div>
-      <input type="text" id="search" placeholder="Search for Medicines and Health Products">
-    </div>
-    <div>
-      <a href="">
-        <p>Need help ?</p>
-      </a>
-    </div>
-  </nav>
-  <!-- ------------------- -->
-
-
-
-  <div class="pDiv">
-    <div>
-      <h2>My Cart</h2>
-    </div>
-    <div class="productsDiv">
-    </div>
-  </div>
-  <div class="grandTotalDiv">
-    <div class="locationDiv">
-      <div class="delivery">
+  <body>
+    <!-- navbar--------- -->
+    <nav>
+      <div>
+        <a href="index.html"
+          ><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt=""
+        /></a>
       </div>
+      <div>
+        <input
+          type="text"
+          id="search"
+          placeholder="Search for Medicines and Health Products"
+        />
+      </div>
+      <div>
+        <a href="">
+          <p>Need help ?</p>
+        </a>
+      </div>
+    </nav>
+    <!-- ------------------- -->
+
+    <div class="pDiv">
+      <div>
+        <h2>My Cart</h2>
+      </div>
+      <div class="productsDiv"></div>
+    </div>
+    <div class="grandTotalDiv">
+      <div class="locationDiv">
+        <div class="delivery"></div>
+      </div>
+
+      <div class="GTotalDiv"></div>
     </div>
 
-    <div class="GTotalDiv">
+    <footer id="footer"></footer>
 
-    </div>
-  </div>
-
-
-  <footer id="footer"></footer>
-
-  <!-- -------------------- -->
+    <!-- -------------------- -->
 
     <script src="./script/cartPage.js" type="module"></script>
-</body>
-
+  </body>
 </html>
