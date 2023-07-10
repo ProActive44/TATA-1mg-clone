@@ -1,0 +1,1 @@
+var API_URL = 'https://onemg-server-1muy.onrender.com'
