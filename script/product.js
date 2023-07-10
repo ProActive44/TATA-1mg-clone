@@ -4,6 +4,10 @@ document.getElementById("navbar").innerHTML = navbar();
 import footer from "../components/footer.js";
 document.getElementById("footer").innerHTML = footer();
 
+// console.log(API_URL);
+// const apiUrl = process.env.API_URL; 
+// console.log(apiUrl)
+
 let page = 1;
 
 let container = document.getElementById("products");
@@ -95,29 +99,29 @@ let getdata = async (url) => {
 
 // Products array with AllProduct Array
 let Popular_Combo_Deals = await getdata(
-  `https://onemg-server-1muy.onrender.com/Popular_Combo_Deals?_page=${page}&_limit=9`
+  `${API_URL}/Popular_Combo_Deals?_page=${page}&_limit=9`
 );
 let Calcium_supplement = await getdata(
-  `https://onemg-server-1muy.onrender.com/Calcium_supplement?_page=${page}&_limit=9`
+  `${API_URL}/Calcium_supplement?_page=${page}&_limit=9`
 );
 let Spotlight = await getdata(
-  `https://onemg-server-1muy.onrender.com/Spotlight?_page=${page}&_limit=9`
+  `${API_URL}/Spotlight?_page=${page}&_limit=9`
 );
 let Treading = await getdata(
-  `https://onemg-server-1muy.onrender.com/Treading?_page=${page}&_limit=9`
+  `${API_URL}/Treading?_page=${page}&_limit=9`
 );
 let Breakfast = await getdata(
-  `https://onemg-server-1muy.onrender.com/Breakfast?_page=${page}&_limit=9`
+  `${API_URL}/Breakfast?_page=${page}&_limit=9`
 );
 let Bodymassagers = await getdata(
-  `https://onemg-server-1muy.onrender.com/Bodymassagers?_page=${page}&_limit=9`
+  `${API_URL}/Bodymassagers?_page=${page}&_limit=9`
 );
 let FootHealth = await getdata(
-  `https://onemg-server-1muy.onrender.com/FootHealth?_page=${page}&_limit=9`
+  `${API_URL}/FootHealth?_page=${page}&_limit=9`
 );
 
 let AllProducts = await getdata(
-  `https://onemg-server-1muy.onrender.com/ALLProducts?_page=${page}&_limit=9`
+  `${API_URL}/ALLProducts?_page=${page}&_limit=9`
 );
 
 displaydata(AllProducts);
@@ -216,7 +220,7 @@ let highToLow = document.getElementById("highToLow");
 lowToHigh.addEventListener("change", async () => {
   if (lowToHigh.checked == false && highToLow.checked == false) {
     let data = await fetch(
-      "https://onemg-server-1muy.onrender.com/ALLProducts?_page=1&_limit=9"
+      `${API_URL}/ALLProducts?_page=1&_limit=9`
     );
     data = await data.json();
     displaydata(data);
@@ -225,7 +229,7 @@ lowToHigh.addEventListener("change", async () => {
 
   highToLow.checked = false;
   let data = await fetch(
-    "https://onemg-server-1muy.onrender.com/ALLProducts?_sort=price&_order=asc&_page=1&_limit=9"
+    `${API_URL}/ALLProducts?_sort=price&_order=asc&_page=1&_limit=9`
   );
   data = await data.json();
   // console.log("this is sorted - " + data)
@@ -235,7 +239,7 @@ lowToHigh.addEventListener("change", async () => {
 highToLow.addEventListener("change", async () => {
   if (lowToHigh.checked == false && highToLow.checked == false) {
     let data = await fetch(
-      "https://onemg-server-1muy.onrender.com/ALLProducts?_page=1&_limit=9"
+      `${API_URL}/ALLProducts?_page=1&_limit=9`
     );
     data = await data.json();
     displaydata(data);
@@ -244,7 +248,7 @@ highToLow.addEventListener("change", async () => {
 
   lowToHigh.checked = false;
   let data = await fetch(
-    "https://onemg-server-1muy.onrender.com/ALLProducts?_sort=price&_order=desc&_page=1&_limit=9"
+    `${API_URL}/ALLProducts?_sort=price&_order=desc&_page=1&_limit=9`
   );
   data = await data.json();
   // console.log("this is sorted - " + data)
@@ -260,7 +264,7 @@ let searchByBrand = document.getElementById("searchByBrand");
 document.getElementById("seachbtn").addEventListener("click", async () => {
   let search = searchByBrand.value;
   let data = await fetch(
-    `https://onemg-server-1muy.onrender.com/ALLProducts?q=${search}`
+    `${API_URL}/ALLProducts?q=${search}`
   );
   data = await data.json();
   displaydata(data);
