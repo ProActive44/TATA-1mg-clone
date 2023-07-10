@@ -9,11 +9,11 @@
 3. JavaScript
 
 #### Project was contributed by - 
-1. Tushar     - Payment page
-2. Gautam     - Cart page
+1. Vishwesh   - SignUp & Login
+2. Prasad     - HomePage & Server
 3. Anish      - Product page
-4. Prasad     - HomePage
-5. Vishwesh   - SignUp & Login
+4. Gautam     - Cart page
+5. Tushar     - Payment page
 
 #### Site Flow
 1. Home Page - 
