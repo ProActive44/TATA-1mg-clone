@@ -9,10 +9,14 @@ document.getElementById("footer").innerHTML = footer();
 
 // connect to product page
 
-let goToProducts = ()=>{
+function goToProducts() {
   window.location.href = "product.html";
 }
-// goToProducts()
+ // Retrieve the button element
+ const quickOrderButton = document.querySelector(".quick-order");
+
+ // Attach onclick event handler
+ quickOrderButton.onclick = goToProducts;
 
 // ----- For Slideshow in part-1 ---------------------------------------
 var counter = 1;
@@ -26,7 +30,7 @@ setInterval(function () {
 // ----------------------------------------------------------------------
 
 var windowWidth = window.innerWidth;
-console.log("Window width: " + windowWidth + "px");
+// console.log("Window width: " + windowWidth + "px");
 
 // ---- For slide buttons in part-4 -----------------------------------------------------
 
@@ -45,7 +49,6 @@ document
     document.querySelector("#part-4 .healthConcernsDivs").style.transition =
       "0.5s";
     leftShift += 300;
-
     if (windowWidth < 500) {
       lastWidth = 1600;
     } else if (windowWidth < 700) {
@@ -524,13 +527,26 @@ let displaydata = (data, container) => {
 
     data.map((ele, idx) => {
      
+   
     let div = document.createElement("div");
+    
     div.classList = "part-8-Container-card";
     if (idx === 0) {
       div.classList = "first part-8-Container-card";
     }
     div.addEventListener("click", function(){
-      goToProducts()
+        let obj = {
+          img: ele.image,
+          type: ele.type,
+          rating: ele.rating,
+          title: ele.title,
+          desc: ele.description,
+          price: ele.price,
+          oldMRP: ele.oldMRP,
+          discount: ele.discount,
+        };
+        localStorage.setItem("Productdescription", JSON.stringify(obj));
+        window.location.href = "productdescp.html";
     })
 
     let img = document.createElement("img");
@@ -559,6 +575,7 @@ let displaydata = (data, container) => {
     MRP.classList = "price"
     MRP.innerHTML = `₹<span>${ele.price}</span>`;
 
+
     div.append(img, h3, desc, oldPriceDiv, MRP)
     
     container.append(div)
@@ -566,11 +583,23 @@ let displaydata = (data, container) => {
 };
 
 let getdata = async (url, container) => {
+  let div = document.createElement("div");
+  div.classList = "part-8-Container-card";
+  // div.style.border = '1px solid red'
+
+  let loading = document.createElement('div')
+  let h3 = document.createElement('h3')
+  h3.textContent = "Loading..."
+  loading.append(h3)
+
+  div.append(loading)
+  div.style.height = '350px'
+  container.append(div)
     try {
         let res = await fetch(url)
         let data = await res.json()
         displaydata(data, container)
-        console.log(data)
+        // console.log(data)
     } catch (error) {
         console.log(error)
     }

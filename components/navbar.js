@@ -1,5 +1,6 @@
 export default function navbar() {
-    return ` <div id="main-nav">
+
+  return ` <div id="main-nav">
 
     <div id="navbar-top">
         <div id="navbar-top-options1">
@@ -47,7 +48,7 @@ export default function navbar() {
     </div>
     <div id="navbar-middle">
         <div id="navbar-middle-location">
-            <i style="margin-left: 20px;" class="fa-solid fa-location-dot"></i>
+            <i style="margin-left: 10px;" class="fa-solid fa-location-dot"></i>
             <select id="location">
                 <optgroup label="TOP CITIES"></optgroup>
                 <option > Enter Your City </option>
@@ -97,7 +98,7 @@ export default function navbar() {
                 <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1570695364/quick_buy_rebrand_lqpnce.svg" />
             </div>
             <div class="discount_tag">QUICK BUY! Flat 15% off on medicines*</div>
-            <button class="quick-order">Quick Order</button onclick="goToProducts()">
+            <button class="quick-order">Quick Order</button>
         </div>
     </div>
     
@@ -162,5 +163,5 @@ export default function navbar() {
         </div>
         
     </div>
-</div>`
+</div>`;
 }

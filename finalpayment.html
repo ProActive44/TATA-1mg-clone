@@ -15,64 +15,39 @@
     <!-- <link rel="stylesheet" href="payment copy.css" /> -->
     <!-- tab icon -->
     <link rel="icon" href="https://www.1mg.com/faviconRebrand.ico" />
-     <!-- fontawsome icons -->
-     <script src="https://kit.fontawesome.com/f7dfcdf24b.js" crossorigin="anonymous"></script>
+    <!-- fontawsome icons -->
+    <script
+      src="https://kit.fontawesome.com/f7dfcdf24b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <!-- nav-bar -->
 
     <div class="container">
-      <div id="navbar">
-        <div class="nav_1st_innder_div">
-          <div
-            itemscope=""
-            itemtype="http://schema.org/Organization"
-            class="com_logo"
-          >
-            <img
-              src="https://www.1mg.com/images/tata_1mg_logo.svg"
-              alt="1mg, best e pharmacy in India"
-              title="1mg, India's Largest Healthcare Platform"
-              width="124"
-              height="35"
-            />
-          </div>
-          <div class="search_bar">
-            <div class="search_bar_innerdiv">
-              <input
-                id="searchbarinfo"
-                type="text"
-                autocomplete="off"
-                name="name"
-                data-auto-search-bar="true"
-                class="styles_search-input__3I6VS"
-                value=""
-                placeholder="Search for Medicines and Health Products"
-              />
-              <div class="search_icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="13"
-                  fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+      <!-- navbar--------- -->
+      <nav>
+        <div>
+          <a href="index.html"
+            ><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt=""
+          /></a>
         </div>
-        <div class="help_link">
-          <div class="help_link_innerdiv">
-            <a href="/help" class="help_link_anc"><span>Need Help?</span></a>
-          </div>
+        <div>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search for Medicines and Health Products"
+          />
         </div>
-      </div>
+        <div>
+          <a href="">
+            <p>Need help ?</p>
+          </a>
+        </div>
+      </nav>
+      <!-- ----------------- -->
+
       <div class="middlecont">
         <div class="left">
           <div class="wallet">
@@ -126,13 +101,15 @@
           <div class="credicard">
             <div class="upper">
               <div class="creditdebit">Credit & Debit Cards</div>
-              <div class="addnew"style = "color:black">Add new Cards For Payment</div>
+              <div class="addnew" style="color: black">
+                Add new Cards For Payment
+              </div>
             </div>
 
-            <div class="cardnamee" style = "color:black">Card Number</div>
+            <div class="cardnamee" style="color: black">Card Number</div>
             <div class="cardin">
               <input
-              class="all"
+                class="all"
                 type="number"
                 placeholder="XXXXXXXXXXXX"
                 id="cardnum"
@@ -140,17 +117,17 @@
               />
             </div>
             <div class="expisc">
-              <div class="expiry" style = "color:black">Expiry Date(MM/YY)</div>
-              <div class="securitycode" style = "color:black">CVV</div>
+              <div class="expiry" style="color: black">Expiry Date(MM/YY)</div>
+              <div class="securitycode" style="color: black">CVV</div>
             </div>
             <div class="secinp">
               <div class="monthyear"></div>
               <div class="cvv"></div>
             </div>
             <div class="namecard">
-              <div id="datediv" style="display: flex; align-items: center;">
+              <div id="datediv" style="display: flex; align-items: center">
                 <input
-                class="all"
+                  class="all"
                   type="text"
                   id="month"
                   placeholder="MM"
@@ -159,7 +136,7 @@
                 />
                 <p id="slash">/</p>
                 <input
-                class="all"
+                  class="all"
                   type="text"
                   id="year"
                   placeholder="YY"
@@ -169,7 +146,7 @@
               </div>
               <div class="check" class="all">
                 <input
-                class="all"
+                  class="all"
                   type="text"
                   id="cvv"
                   placeholder="•••"
@@ -190,43 +167,36 @@
             </div>
           </div>
         </div>
-        <div class="right">
-          <div class="totalprice" id="totalprice">
-            <!-- calculate the price -->
-          </div>
 
-          <!-- checkout -->
-          <div class="right" id="righ">
-            <div class="checkout">
-              <div class="checkoutbut">Payment Summary</div>
-              <div class="pament_summary">
-                <div>
-                  <!-- <div id="cartname"> -->
-                  <div>No. Of Items :</div>
-                  <div id="item_no">0</div>
-                </div>
-                <div>
-                  <div>Order Subtotal :</div>
-                  <div id="total"></div>
-                </div>
-                <div>
-                  <div>Discount :</div>
-                  <div id="discount">0%</div>
-                </div>
-                <div>
-                  <div>Tax (GST) :</div>
-                  <div>+18%</div>
-                </div>
-                <div
-                  style="border-bottom: 1px solid #d5d9db; margin-bottom: 5px"
-                >
-                  <div>Shipping :</div>
-                  <div>Free Shipping</div>
-                </div>
-                <div>
-                  <div>Order Total :</div>
-                  <div id="ordertotal">0</div>
-                </div>
+        <!-- checkout -->
+        <div class="right" id="righ">
+          <div class="checkout">
+            <div class="checkoutbut">Payment Summary</div>
+            <div class="pament_summary">
+              <div>
+                <!-- <div id="cartname"> -->
+                <div>No. Of Items :</div>
+                <div id="item_no">0</div>
+              </div>
+              <div>
+                <div>Order Subtotal :</div>
+                <div id="total"></div>
+              </div>
+              <div>
+                <div>Discount :</div>
+                <div id="discount">0%</div>
+              </div>
+              <div>
+                <div>Tax (GST) :</div>
+                <div>+18%</div>
+              </div>
+              <div style="border-bottom: 1px solid #d5d9db; margin-bottom: 5px">
+                <div>Shipping :</div>
+                <div>Free Shipping</div>
+              </div>
+              <div>
+                <div>Order Total :</div>
+                <div id="ordertotal">0</div>
               </div>
             </div>
           </div>
@@ -235,45 +205,39 @@
     </div>
   </body>
   <script>
-      document.querySelector(".com_logo").addEventListener("click",function(){
-          window.location.href = "index.html";
-      })
+    document.querySelector(".com_logo").addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
   </script>
- 
+
   <script src="./script/finalpayment.js"></script>
   <script>
-var cartdata = JSON.parse(localStorage.getItem("price_data")) || [];
-var countarr = JSON.parse(localStorage.getItem("price_data")) || [];
-let amountarr = JSON.parse(localStorage.getItem("price_data"));
+    var cartdata = JSON.parse(localStorage.getItem("data")) || [];
 
-console.log(cartdata)
-console.log(amountarr);
+    let quantity = 0;
+    let subTotal = 0;
+    let DiscountPercent = 0;
+    let total = 0;
+    for (let i = 0; i < cartdata.length; i++) {
+      quantity += cartdata[i].quantity;
+      subTotal += cartdata[i].mrp * cartdata[i].quantity;
+      total += cartdata[i].price * cartdata[i].quantity;
+    }
 
-var total = amountarr[2]
+    let Discount = subTotal - total;
+    DiscountPercent = (Discount / subTotal) * 100;
 
-function showtotal() {
-  var total = amountarr[2]
-  document.querySelector("#total").innerText = "₹"+total;
-  var taxtotal = total+18/100*total;
-  document.querySelector("#ordertotal").innerText = "₹"+ taxtotal
+    total = total + total * 0.18;
 
-  if(countarr.length!=0){
-  var promototal = total-30/100*total;
-    document.querySelector("#ordertotal").innerText = "₹"+ Math.floor(promototal)
-    document.querySelector("#discount").innerText = "-30%"
-}
-}
+    function showtotal() {
+      document.querySelector("#item_no").innerText = quantity;
+      document.querySelector("#total").innerText = "₹" + subTotal;
+      document.querySelector("#discount").innerText = `${Math.floor(
+        DiscountPercent
+      )}%`;
+      document.querySelector("#ordertotal").innerText = `₹${Math.floor(total)}`;
+    }
 
-function items_no() {
-  var itemsno = cartdata.length;
-  document.querySelector("#item_no").innerText = itemsno;
-}
-
-showtotal();
-items_no();
-
-
-
-
+    showtotal();
   </script>
 </html>

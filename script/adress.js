@@ -1,4 +1,4 @@
-var addarr = JSON.parse(localStorage.getItem("address")) || [];
+// var addarr = JSON.parse(localStorage.getItem("address")) || [];
   var adddata = JSON.parse(localStorage.getItem("address")) || [];
 
   function save() {
@@ -55,15 +55,15 @@ var addarr = JSON.parse(localStorage.getItem("address")) || [];
       cityno: cityno.value,
       stateno: stateno.value,
     };
-    addarr.push(addobj);
-    localStorage.setItem("address", JSON.stringify(addarr));
-    var adddata = JSON.parse(localStorage.getItem("address")) || [];
+    adddata.push(addobj);
+    localStorage.setItem("address", JSON.stringify(adddata));
+    // var adddata = JSON.parse(localStorage.getItem("address")) || [];
     display(adddata);
   }
 
-  function display(adddata, index) {
+  function display(adddata) {
     document.querySelector("#youradd").innerText = "";
-    adddata.map(function (elem) {
+    adddata.map((elem, idx)=> {
       var maindiv = document.createElement("div");
       maindiv.setAttribute("id", "inner_main_div");
 
@@ -74,6 +74,7 @@ var addarr = JSON.parse(localStorage.getItem("address")) || [];
       input.setAttribute("id", "choose");
       inputdiv.append(input);
       input.addEventListener("focus", function () {
+        maindiv.style.backgroundColor = 'grey'
         document
           .querySelector("#con_id")
           .addEventListener("click", function () {
@@ -96,8 +97,8 @@ var addarr = JSON.parse(localStorage.getItem("address")) || [];
       icon_div.setAttribute("id", "icon_div");
 
       trash.addEventListener("click", function () {
-        adddata.splice(index, 1);
-        addarr.splice(index, 1);
+        adddata.splice(idx, 1);
+        // addarr.splice(index, Idx);
         localStorage.setItem("address", JSON.stringify(adddata));
         display(adddata);
       });
@@ -132,7 +133,7 @@ var addarr = JSON.parse(localStorage.getItem("address")) || [];
   });
 
   function returntocart() {
-    window.location.href = "index.html";
+    window.location.href = "cartPage.html";
     localStorage.removeItem("addressuser");
   }
 
