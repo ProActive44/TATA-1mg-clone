@@ -163,7 +163,7 @@ h1 {
   border-radius: 10px;
   /* transition: 1s; */
   margin: 2px 15px 0 0;
-  /* display: none; */
+  display: none;
   /* gap: 40px; */
 }
 
