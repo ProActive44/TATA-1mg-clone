@@ -17,9 +17,9 @@
 
 #### Site Flow
 1. Home Page - 
-![image](https://github.com/ProActive44/specialized-bike-app/assets/125894779/198cca68-5600-42e1-adf7-36e060589112)
+![image](https://github.com/ProActive44/TATA-1mg-clone/assets/125894779/014feb0d-e10c-4c0c-bf12-8a9acacc9ee3)
 2. Product Page -
-![image](https://github.com/ProActive44/specialized-bike-app/assets/125894779/12c0c755-6fd2-4ec5-b187-2a055312353a)
+![image](https://github.com/ProActive44/TATA-1mg-clone/assets/125894779/5d91a0a2-df4a-4d96-b203-62d9b62c4347)
 3. Product Details Page - 
 ![image](https://github.com/ProActive44/specialized-bike-app/assets/125894779/8f698a40-8eb5-436a-a4c2-378ecbf4aebc)
 4. Cart page - 
