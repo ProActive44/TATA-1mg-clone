@@ -130,7 +130,11 @@ body {
   /* margin-top: 10px;
   margin-left: 20px; */
   width: 453.6px;
-  height: 48.56px;
+  height: 60px;
+  /* height: 40px;  Adjust the height to fit your layout  */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
   /* border: 1px solid red; */
   /* margin-left: -50px; */
   /* margin-right: 50px; */
@@ -276,7 +280,7 @@ hr {
   margin: 20px auto 50px;
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 .locationDiv {
