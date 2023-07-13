@@ -144,6 +144,7 @@ h3 {
   /* overflow: hidden; */
 }
 
+
 .products-Container-card {
   padding: 20px 10px;
   min-width: 170px;
@@ -442,20 +443,17 @@ h3 {
   }
 }
 @media screen and (max-width: 871px) {
-  #filter {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    /* border: 2px solid red; */
-    /* padding-right: 200px; */
-  }
+  
   #products {
    justify-content: center;
-   padding: 10px 0;
+   padding: 20px 0;
    margin: 0;
   }
 }
 @media screen and (max-width: 560px) {
+  #filter {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 410px) {
 }

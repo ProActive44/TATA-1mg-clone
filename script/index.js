@@ -594,7 +594,7 @@ let getdata = async (url, container) => {
   try {
     let res = await fetch(url);
     let data = await res.json();
-    displaydata(data, container);
+    displaydata(data.data, container);
     // console.log(data)
   } catch (error) {
     console.log(error);
@@ -699,12 +699,14 @@ const search = debounce(function () {
     resultsList.style.display = "none";
     return;
   }
-  fetch(`${API_URL}/ALLProducts?q=${query}`)
+  fetch(`${API_URL_JSON}/ALLProducts?q=${query}`)
     .then((response) => response.json())
-    .then((data) => {
+    .then((res) => {
+      let data = res.data
+      console.log(res)
       resultsList.innerHTML = "";
       resultsList.style.display = "none";
-      data.forEach((result) => {
+      data?.forEach((result) => {
         const li = document.createElement("li");
         li.classList = "debounceList";
         li.textContent = result.title;
