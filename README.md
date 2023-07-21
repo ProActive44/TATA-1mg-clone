@@ -7,10 +7,13 @@
 1. HTML
 2. CSS
 3. JavaScript
+4. Node JS
+5. Express
+6. MongoDB
 
 #### Project was contributed by - 
 1. Vishwesh   - SignUp & Login
-2. Prasad     - HomePage & Server
+2. Prasad     - HomePage & Backend Server
 3. Anish      - Product page
 4. Gautam     - Cart page
 5. Tushar     - Payment page
