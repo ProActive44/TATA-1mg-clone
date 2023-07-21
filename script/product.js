@@ -4,11 +4,22 @@ document.getElementById("navbar").innerHTML = navbar();
 import footer from "../components/footer.js";
 document.getElementById("footer").innerHTML = footer();
 
+// connect to product page
+function goToProducts() {
+  window.location.href = "product.html";
+}
+// Retrieve the button element
+const quickOrderButton = document.querySelector(".quick-order");
+
+// Attach onclick event handler
+quickOrderButton.onclick = goToProducts;
+
 // console.log(API_URL);
 // const apiUrl = process.env.API_URL; 
 // console.log(apiUrl)
 
 let page = 1;
+let currData = []; // For sorting and filtering work simultaneously.
 
 let container = document.getElementById("products");
 let displaydata = (data) => {
@@ -214,6 +225,9 @@ function filtereddata() {
 
 // Discount
 
+
+// Sorting
+
 let lowToHigh = document.getElementById("lowToHigh");
 let highToLow = document.getElementById("highToLow");
 
@@ -264,10 +278,12 @@ let searchByBrand = document.getElementById("searchByBrand");
 document.getElementById("seachbtn").addEventListener("click", async () => {
   let search = searchByBrand.value;
   let data = await fetch(
-    `${API_URL}/ALLProducts?q=${search}`
+    `${API_URL_JSON}/ALLProducts?q=${search}`
   );
   data = await data.json();
-  displaydata(data);
+  if(data.length != 0){
+    displaydata(data);
+  }
 });
 
 // ------------------------------------

@@ -188,7 +188,7 @@ h1 {
 }
 
 @media (min-width: 1368px) {
-  .navigation-auto div{
+  .navigation-auto div {
     display: none;
   }
 }
@@ -1409,14 +1409,47 @@ h3 {
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   margin: auto;
   background-color: white;
   padding: 20px;
-  margin: -30px 0 0 200px;
+  margin: -40px 0 0 330px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   gap: 10px;
   border-radius: 20px;
   z-index: 1;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  #results {
+    margin: -60px 0 0 430px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  #results {
+    margin: -65px 0 0 350px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #results {
+    margin: -65px 0 0 250px;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  #results {
+    margin: -25px 0 0 50px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #results {
+    margin: -25px 0 0 10px;
+    width: 90%;
+  }
 }
