@@ -594,9 +594,9 @@ let getdata = async (url, container) => {
   try {
     let res = await fetch(url);
     let data = await res.json();
-    displaydata(data.data, container);
     // console.log(data)
-  } catch (error) {
+    displaydata(data, container);
+  } catch (error){
     console.log(error);
   }
 };
@@ -702,7 +702,8 @@ const search = debounce(function () {
   fetch(`${API_URL_JSON}/ALLProducts?q=${query}`)
     .then((response) => response.json())
     .then((res) => {
-      let data = res.data
+      // let data = res.data
+      let data = res
       console.log(res)
       resultsList.innerHTML = "";
       resultsList.style.display = "none";
