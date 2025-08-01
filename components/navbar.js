@@ -38,7 +38,7 @@ export default function navbar() {
             </div>
             <div class="cart_icon" id="cart_icon">
                 <a href="cartPage.html">
-                    <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1570101941/cart-icon-rebrand_vp4k0f.svg">
+                    <img src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png" alt="cart">
                 </a>
             </div>
             <div class="help">
@@ -95,7 +95,7 @@ export default function navbar() {
         </div>
         <div id="navbar-middle-quick-order">
             <div class="discount_icon">
-                <img src="https://res.cloudinary.com/du8msdgbj/image/upload/v1570695364/quick_buy_rebrand_lqpnce.svg" />
+                <img src="https://static.vecteezy.com/system/resources/previews/016/327/431/original/discount-badge-tag-3d-icon-render-illustration-png.png" alt="discount"/>
             </div>
             <div class="discount_tag">QUICK BUY! Flat 15% off on medicines*</div>
             <button class="quick-order">Quick Order</button>

@@ -5,6 +5,10 @@ document.getElementById("navbar").innerHTML = navbar();
 import footer from "../components/footer.js";
 document.getElementById("footer").innerHTML = footer();
 
+document.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
+});
+
 // connect to product page
 
 function goToProducts() {
@@ -593,8 +597,8 @@ let getdata = async (url, container) => {
   container.append(div);
   try {
     let res = await fetch(url);
-    let data = await res.json();
-    // console.log(data)
+    let result = await res.json();
+    let data = result.data
     displaydata(data, container);
   } catch (error){
     console.log(error);
@@ -699,11 +703,12 @@ const search = debounce(function () {
     resultsList.style.display = "none";
     return;
   }
-  fetch(`${API_URL_JSON}/ALLProducts?q=${query}`)
-    .then((response) => response.json())
+  fetch(`${API_URL}/ALLProducts?q=${query}`)
+    .then((response) => {
+      return response.json()
+    })
     .then((res) => {
-      // let data = res.data
-      let data = res
+      let data = res.data;
       console.log(res)
       resultsList.innerHTML = "";
       resultsList.style.display = "none";

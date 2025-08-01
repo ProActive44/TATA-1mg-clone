@@ -4,6 +4,10 @@ document.getElementById("navbar").innerHTML = navbar();
 import footer from "../components/footer.js";
 document.getElementById("footer").innerHTML = footer();
 
+document.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
+});
+
 // connect to product page
 function goToProducts() {
   window.location.href = "product.html";
@@ -25,7 +29,7 @@ let container = document.getElementById("products");
 let displaydata = (data) => {
   container.textContent = "";
 
-  data.map((ele, idx) => {
+  data?.map((ele, idx) => {
     let div = document.createElement("div");
     div.classList = "products-Container-card";
     if (idx === 0) {
@@ -99,8 +103,8 @@ let getdata = async (url) => {
 
   try {
     let res = await fetch(url);
-    let data = await res.json();
-    return data;
+    let result = await res.json();
+    return result.data;
     // displaydata(data)
     // console.log(data);
   } catch (error) {
@@ -233,38 +237,42 @@ let highToLow = document.getElementById("highToLow");
 
 lowToHigh.addEventListener("change", async () => {
   if (lowToHigh.checked == false && highToLow.checked == false) {
-    let data = await fetch(
+    let res = await fetch(
       `${API_URL}/ALLProducts?_page=1&_limit=9`
     );
-    data = await data.json();
+    let result = await res.json();
+    let data = result.data;
     displaydata(data);
     return;
   }
 
   highToLow.checked = false;
-  let data = await fetch(
+  let res = await fetch(
     `${API_URL}/ALLProducts?_sort=price&_order=asc&_page=1&_limit=9`
   );
-  data = await data.json();
+  let result = await res.json();
+  let data = result.data;
   // console.log("this is sorted - " + data)
   displaydata(data);
 });
 
 highToLow.addEventListener("change", async () => {
   if (lowToHigh.checked == false && highToLow.checked == false) {
-    let data = await fetch(
+    let res = await fetch(
       `${API_URL}/ALLProducts?_page=1&_limit=9`
     );
-    data = await data.json();
+    let result = await res.json();
+    let data = result.data;
     displaydata(data);
     return;
   }
 
   lowToHigh.checked = false;
-  let data = await fetch(
+  let res = await fetch(
     `${API_URL}/ALLProducts?_sort=price&_order=desc&_page=1&_limit=9`
   );
-  data = await data.json();
+  let result = await res.json();
+  let data = result.data;
   // console.log("this is sorted - " + data)
   displaydata(data);
 });
@@ -277,10 +285,11 @@ highToLow.addEventListener("change", async () => {
 let searchByBrand = document.getElementById("searchByBrand");
 document.getElementById("seachbtn").addEventListener("click", async () => {
   let search = searchByBrand.value;
-  let data = await fetch(
+  let res = await fetch(
     `${API_URL_JSON}/ALLProducts?q=${search}`
   );
-  data = await data.json();
+  let result = await res.json();
+  let data = result.data;
   if(data.length != 0){
     displaydata(data);
   }
@@ -350,3 +359,66 @@ if (userName === null) {
   // Update the signup button text with user name
   document.getElementById("signup_button").textContent = "";
 }
+
+
+
+// --------------------------------------------------------------------------------------------------
+
+
+
+// searchbar debouncing  -----------------------------------------------------------------
+
+const searchInput = document.querySelector(".search_input");
+const resultsList = document.getElementById("results");
+
+const debounce = function (fn, d) {
+  let timer;
+  return function () {
+    let context = this,
+      args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(context, args);
+    }, d);
+  };
+};
+
+function goToProductdetails() {
+  window.location.href = "product.html";
+}
+
+const search = debounce(function () {
+  const query = searchInput.value;
+  if (query === "") {
+    resultsList.innerHTML = "";
+    resultsList.style.display = "none";
+    return;
+  }
+  fetch(`${API_URL}/ALLProducts?q=${query}`)
+    .then((response) => {
+      return response.json()
+    })
+    .then((res) => {
+      let data = res.data;
+      console.log(res)
+      resultsList.innerHTML = "";
+      resultsList.style.display = "none";
+      data?.forEach((result) => {
+        const li = document.createElement("li");
+        li.classList = "debounceList";
+        li.textContent = result.title;
+        resultsList.appendChild(li);
+        resultsList.style.display = "flex";
+
+        li.addEventListener("click", function () {
+          goToProductdetails();
+        });
+      });
+    })
+    .catch((error) => console.log(error));
+}, 500);
+
+searchInput.addEventListener("input", search);
+// resultsList.style.display = "none";
+
+// ------------------------------------------------------------------------

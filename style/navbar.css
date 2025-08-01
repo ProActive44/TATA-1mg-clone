@@ -88,6 +88,9 @@
   height: 23px;
   cursor: pointer;
 }
+.cart_icon img {
+  width: 30px;
+}
 .help a {
   cursor: pointer;
 }
@@ -150,10 +153,17 @@
 }
 
 .discount_icon {
-  height: 18px;
-  width: 18px;
-  padding-bottom: 5px;
+  /* height: 1px; */
+  /* width: 15px; */
+  /* padding-bottom: 5px; */
+  /* border: 2px solid red; */
+  /* margin: 0 auto; */
 }
+
+.discount_icon img{
+  width: 25px;
+}
+
 .discount_tag {
   font-size: 12px;
   padding-right: 20px;
